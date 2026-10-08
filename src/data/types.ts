@@ -79,10 +79,16 @@ export type CapabilityCard = {
   title: string;
   lead: string;
   chips: string[];
-  proof: string;
+  /** 카드 아래 근거 한 줄 (다른 섹션과 겹치면 생략) */
+  proof?: string;
   solvedBadge?: boolean;
 };
 
-export type TrainingSegment = { label: string; hours: number; tone: "plan" | "design" | "build" | "ship" | "data" };
+export type TrainingTone = "plan" | "design" | "build" | "ship" | "data";
+
+export type TrainingSegment = { label: string; tone: TrainingTone };
+
+/** NCS 능력단위 이수 내역 한 줄 (성적표 한 행) */
+export type TrainingUnit = { grade: number; semester: number; name: string; code: string; hours: number; tone: TrainingTone };
 
 export type Lecture = { title: string; topic: string; planned?: boolean };

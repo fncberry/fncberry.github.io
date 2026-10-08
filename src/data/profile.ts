@@ -33,8 +33,7 @@ export const hero = {
 
 export const nav: Link[] = [
   { label: "프로젝트", href: "#work" },
-  { label: "활동", href: "#activities" },
-  { label: "주요 수상", href: "#journey" },
+  { label: "경험·수상", href: "#activities" },
   { label: "소개", href: "#about" },
   { label: "연락하기", href: "#contact" },
 ];
@@ -63,6 +62,6 @@ export const contact = {
 };
 
 export const education = [
-  { school: "고려대학교", detail: "정보대학 컴퓨터학과 · 26학번", period: "2026 — 재학 중" },
+  { school: "고려대학교", detail: "정보대학 컴퓨터학과 · 26학번", period: "2026 — 재학" },
   { school: "한국디지털미디어고등학교", detail: "웹프로그래밍과 22기", period: "2023 — 2025" },
 ];

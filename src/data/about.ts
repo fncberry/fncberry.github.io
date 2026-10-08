@@ -1,4 +1,4 @@
-import type { CapabilityCard, Lecture, TrainingSegment } from "./types";
+import type { CapabilityCard, Lecture, TrainingSegment, TrainingUnit } from "./types";
 
 export const aiCard = {
   kicker: "CORE / HOW I BUILD",
@@ -10,11 +10,6 @@ export const aiCard = {
     { title: "교차 검증", text: "회귀 테스트 + Codex로 한 번 더" },
     { title: "직접 리뷰", text: "결과를 읽고 고치며 반복 개선" },
   ],
-  proof: [
-    { title: "택시투게더", text: "Claude Code로 기획부터 배포까지 전체 개발. 정산·매칭 로직은 순수 함수로 분리해 AI가 바꿔도 회귀 테스트로 확인합니다." },
-    { title: "로컬퀘스트", text: "Claude Code와 Codex 두 에이전트로 이중 검증하며 원스토어 출시까지 완료했습니다." },
-    { title: "The Hackerton", text: "연합 바이브코딩 학회의 교육 담당 운영진으로 에이전트 개발 환경, Git, GitHub 협업 강의를 진행하고 있습니다." },
-  ],
   tools: ["Claude Code", "Codex"],
 };
 
@@ -25,7 +20,6 @@ export const capabilityCards: CapabilityCard[] = [
     title: "Problem Solving",
     lead: "알고리즘과 자료구조로 문제를 정확하게 푸는 힘이 개발의 바탕입니다.",
     chips: ["C", "Python", "Algorithms", "Data Structures"],
-    proof: "KOI 본선 2회 입상 · NYPC 3년 연속 특별상 · 구름 알고리즘 챌린지 대상",
     solvedBadge: true,
   },
   {
@@ -33,57 +27,45 @@ export const capabilityCards: CapabilityCard[] = [
     kicker: "PRODUCT",
     title: "Product Engineering",
     lead: "서비스 기획부터 화면, 데이터, 배포까지 혼자서 끝까지 만듭니다.",
-    chips: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Supabase", "PostgreSQL", "Vercel", "Kakao API"],
+    chips: ["Next.js", "React", "TypeScript", "Tailwind CSS", "Flutter", "Supabase", "PostgreSQL", "Vercel", "Kakao API", "Gemini API"],
     proof: "익명 인증 · 실시간 데이터 갱신 · 지도·길찾기 API 연동 · 서비스 기획",
   },
 ];
 
 export const training = {
-  kicker: "TRAINING",
+  kicker: "LEARNING",
   title: "NCS 기반 소프트웨어 실무 교육",
-  stats: [
-    { label: "총 이수", value: "598", unit: "h" },
-    { label: "능력단위", value: "19", unit: "개" },
-  ],
+  /** 그래프 분야. 분야별 시간은 아래 units에서 합산 */
   segments: [
-    { label: "기획", hours: 107, tone: "plan" },
-    { label: "디자인", hours: 42, tone: "design" },
-    { label: "개발", hours: 255, tone: "build" },
-    { label: "배포", hours: 61, tone: "ship" },
-    { label: "데이터 분석", hours: 133, tone: "data" },
+    { label: "기획", tone: "plan" },
+    { label: "디자인", tone: "design" },
+    { label: "개발", tone: "build" },
+    { label: "배포", tone: "ship" },
+    { label: "데이터 분석", tone: "data" },
   ] satisfies TrainingSegment[],
-  // 성적표 순서. 같은 능력단위도 학기별 이수 내역을 각각 표시합니다.
+  // 성적표 순서. code는 NCS 능력단위 코드, tone은 그래프 분야.
+  // 같은 능력단위를 여러 학기에 이수하면 학기별로 따로 적고, 화면에서는 합쳐서 보여줌.
   units: [
-    { grade: 1, semester: 1, name: "IoT 서비스 모형 기획", hours: 16 },
-    { grade: 1, semester: 1, name: "IoT 응용소프트웨어 기획", hours: 36 },
-    { grade: 1, semester: 2, name: "IoT 서비스 모형 기획", hours: 37 },
-    { grade: 1, semester: 2, name: "IoT 응용소프트웨어 기획", hours: 18 },
-    { grade: 2, semester: 1, name: "화면 구현", hours: 18 },
-    { grade: 2, semester: 1, name: "UI 디자인", hours: 33 },
-    { grade: 2, semester: 2, name: "화면 구현", hours: 41 },
-    { grade: 2, semester: 2, name: "UI 테스트", hours: 9 },
-    { grade: 3, semester: 1, name: "데이터베이스 요구사항 분석", hours: 40 },
-    { grade: 3, semester: 1, name: "데이터베이스 구현", hours: 29 },
-    { grade: 3, semester: 1, name: "프로그래밍 언어 활용", hours: 33 },
-    { grade: 3, semester: 1, name: "응용 SW 기초 기술 활용", hours: 36 },
-    { grade: 3, semester: 1, name: "빅데이터 분석 결과 시각화", hours: 22 },
-    { grade: 3, semester: 1, name: "탐색적 데이터 분석", hours: 49 },
-    { grade: 3, semester: 2, name: "SQL활용", hours: 58 },
-    { grade: 3, semester: 2, name: "애플리케이션 배포", hours: 31 },
-    { grade: 3, semester: 2, name: "개발자 환경 구축", hours: 30 },
-    { grade: 3, semester: 2, name: "분석 데이터 피처(Feature) 엔지니어링", hours: 29 },
-    { grade: 3, semester: 2, name: "빅데이터 분석 모델링", hours: 33 },
-  ],
-  dataTrack: {
-    title: "Data Analysis",
-    meta: "빅데이터 분석 · 133h",
-    units: [
-      { title: "탐색적 데이터 분석", hours: 49 },
-      { title: "피처 엔지니어링", hours: 29 },
-      { title: "분석 모델링", hours: 33 },
-      { title: "결과 시각화", hours: 22 },
-    ],
-  },
+    { grade: 1, semester: 1, name: "IoT 서비스 모형 기획", code: "2001010603_16v1", hours: 16, tone: "plan" },
+    { grade: 1, semester: 1, name: "IoT 응용소프트웨어 기획", code: "2001010607_16v1", hours: 36, tone: "plan" },
+    { grade: 1, semester: 2, name: "IoT 서비스 모형 기획", code: "2001010603_16v1", hours: 37, tone: "plan" },
+    { grade: 1, semester: 2, name: "IoT 응용소프트웨어 기획", code: "2001010607_16v1", hours: 18, tone: "plan" },
+    { grade: 2, semester: 1, name: "화면 구현", code: "2001020225_16v4", hours: 18, tone: "build" },
+    { grade: 2, semester: 1, name: "UI 디자인", code: "2001020707_14v1", hours: 33, tone: "design" },
+    { grade: 2, semester: 2, name: "화면 구현", code: "2001020225_16v4", hours: 41, tone: "build" },
+    { grade: 2, semester: 2, name: "UI 테스트", code: "2001020709_14v1", hours: 9, tone: "design" },
+    { grade: 3, semester: 1, name: "데이터베이스 요구사항 분석", code: "2001020401_19v4", hours: 40, tone: "build" },
+    { grade: 3, semester: 1, name: "데이터베이스 구현", code: "2001020405_19v4", hours: 29, tone: "build" },
+    { grade: 3, semester: 1, name: "프로그래밍 언어 활용", code: "2001020215_15v3", hours: 33, tone: "build" },
+    { grade: 3, semester: 1, name: "응용 SW 기초 기술 활용", code: "2001020216_15v3", hours: 36, tone: "build" },
+    { grade: 3, semester: 1, name: "빅데이터 분석 결과 시각화", code: "2001010509_21v4", hours: 22, tone: "data" },
+    { grade: 3, semester: 1, name: "탐색적 데이터 분석", code: "2001010511_21v4", hours: 49, tone: "data" },
+    { grade: 3, semester: 2, name: "SQL활용", code: "2001020413_19v4", hours: 58, tone: "build" },
+    { grade: 3, semester: 2, name: "애플리케이션 배포", code: "2001020214_19v5", hours: 31, tone: "ship" },
+    { grade: 3, semester: 2, name: "개발자 환경 구축", code: "2001020233_19v4", hours: 30, tone: "ship" },
+    { grade: 3, semester: 2, name: "분석 데이터 피처(Feature) 엔지니어링", code: "2001010512_21v1", hours: 29, tone: "data" },
+    { grade: 3, semester: 2, name: "빅데이터 분석 모델링", code: "2001010513_21v1", hours: 33, tone: "data" },
+  ] satisfies TrainingUnit[],
 };
 
 // 강의를 진행하면 planned를 지우면 됨. 새 예정 강의는 같은 형식으로 추가.

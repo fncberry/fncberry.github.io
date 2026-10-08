@@ -1,9 +1,9 @@
 import { About } from "@/components/About";
-import { Activities } from "@/components/Activities";
-import { Awards } from "@/components/Awards";
+import { Career } from "@/components/Career";
 import { Contact, Footer } from "@/components/Contact";
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
+import { Learning } from "@/components/Learning";
 import { Pipeline } from "@/components/Pipeline";
 import { Projects } from "@/components/Projects";
 
@@ -19,9 +19,9 @@ export default function Home() {
         <Hero />
         <Pipeline />
         <Projects />
-        <Activities />
-        <Awards />
+        <Career />
         <About />
+        <Learning />
         <Contact />
       </main>
       <Footer />

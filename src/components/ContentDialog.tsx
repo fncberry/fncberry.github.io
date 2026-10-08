@@ -2,26 +2,32 @@
 
 import { useRef, type ReactNode } from "react";
 
-type Props = {
+type Base = {
   id: string;
   kicker: string;
   title: string;
   description: string;
-  trigger: ReactNode;
-  triggerClassName: string;
   children: ReactNode;
   footer?: ReactNode;
 };
 
-export function ContentDialog({ id, kicker, title, description, trigger, triggerClassName, children, footer }: Props) {
+/** 버튼 하나로 열거나(trigger), 여러 요소에서 열 수 있게 open 함수를 받아 직접 그림(renderTrigger) */
+type Props = Base &
+  ({ trigger: ReactNode; triggerClassName: string; renderTrigger?: never } | { renderTrigger: (open: () => void) => ReactNode; trigger?: never; triggerClassName?: never });
+
+export function ContentDialog({ id, kicker, title, description, trigger, triggerClassName, renderTrigger, children, footer }: Props) {
   const dialogRef = useRef<HTMLDialogElement>(null);
+  const open = () => dialogRef.current?.showModal();
 
   return (
     <>
-      <button type="button" className={triggerClassName} aria-haspopup="dialog" aria-controls={id}
-        onClick={() => dialogRef.current?.showModal()}>
-        {trigger}
-      </button>
+      {renderTrigger ? (
+        renderTrigger(open)
+      ) : (
+        <button type="button" className={triggerClassName} aria-haspopup="dialog" aria-controls={id} onClick={open}>
+          {trigger}
+        </button>
+      )}
       <dialog ref={dialogRef} id={id} className="content-dialog"
         aria-labelledby={`${id}-title`} aria-describedby={`${id}-description`}
         onClick={(event) => {
