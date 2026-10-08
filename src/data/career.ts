@@ -6,7 +6,7 @@ export const activities: Activity[] = [
     period: "현재 활동 중",
     org: "고려대학교 창업동아리",
     role: "SW·AI 개발자",
-    logo: { kind: "mono", text: "지" },
+    logo: { kind: "image", src: "/assets/logo-jinuremi.webp", alt: "지느러미 로고", variant: "fill" },
   },
   {
     name: "The Hackerton",
@@ -27,7 +27,7 @@ export const activities: Activity[] = [
 export const awards: Award[] = [
   {
     title: "한국정보올림피아드 본선",
-    subtitle: "Korean Olympiad in Informatics",
+    subtitle: "Korea Olympiad in Informatics",
     subtitleStyle: "english",
     results: [
       { year: "2022", prize: "동상" },
@@ -43,22 +43,22 @@ export const awards: Award[] = [
     logo: { kind: "image", src: "/assets/logo-nypc.webp", alt: "NYPC 로고", variant: "wide" },
   },
   {
-    title: "대한민국청년창업주간",
+    title: "대한민국학생창업주간",
     subtitle: "리버스 BMC 트랙",
     subtitleStyle: "track",
     results: [{ year: "2026", prize: "최우수상" }],
-    logo: { kind: "mono", text: "창업" },
+    logo: { kind: "image", src: "/assets/logo-startup-week.webp", alt: "대한민국학생창업주간 로고" },
   },
   {
     title: "CPS Festival",
     subtitle: "Creative Problem Solving Festival",
     subtitleStyle: "english",
     results: [{ year: "2024", prize: "금상" }],
-    logo: { kind: "mono", text: "CPS" },
+    logo: { kind: "image", src: "/assets/logo-cps.webp", alt: "CPS Festival 로고" },
   },
   {
-    title: "Groom Highschool Algorithm Challenge",
+    title: "goorm Highschool Algorithm Challenge",
     results: [{ year: "2022", prize: "대상" }],
-    logo: { kind: "mono", text: "goorm" },
+    logo: { kind: "image", src: "/assets/logo-goorm.webp", alt: "goorm 로고", variant: "wide" },
   },
 ];

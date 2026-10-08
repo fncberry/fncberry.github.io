@@ -40,10 +40,9 @@ export const nav: Link[] = [
 ];
 
 export const pipeline = {
-  kicker: "END-TO-END",
   title: "아이디어에서 출시까지, 한 사람이 끝까지",
   steps: [
-    { no: "01 / PLAN", name: "기획", scope: "문제 정의 · 비즈니스 모델", proof: "청년창업주간 BMC 최우수상", ncsHours: 107, href: "#journey" },
+    { no: "01 / PLAN", name: "기획", scope: "문제 정의 · 비즈니스 모델", proof: "학생창업주간 BMC 최우수상", ncsHours: 107, href: "#journey" },
     { no: "02 / DESIGN", name: "디자인", scope: "사용자 흐름 · 화면 설계", proof: "지도·바텀시트 중심 UX", ncsHours: 42, href: "#project-quest" },
     { no: "03 / BUILD", name: "개발", scope: "프론트엔드 · 백엔드 · 로직", proof: "택시투게더 전체 개발", ncsHours: 255, href: "#project-taxi" },
     { no: "04 / SHIP", name: "배포", scope: "웹 배포 · 앱 스토어 출시", proof: "Vercel 데모 · 원스토어 출시", ncsHours: 61, href: "#project-quest" },
@@ -64,6 +63,6 @@ export const contact = {
 };
 
 export const education = [
-  { school: "고려대학교", detail: "정보대학 컴퓨터학과 · 26학번", period: "2026 —" },
+  { school: "고려대학교", detail: "정보대학 컴퓨터학과 · 26학번", period: "2026 — 재학 중" },
   { school: "한국디지털미디어고등학교", detail: "웹프로그래밍과 22기", period: "2023 — 2025" },
 ];

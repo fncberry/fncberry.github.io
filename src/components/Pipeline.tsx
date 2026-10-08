@@ -5,7 +5,6 @@ export function Pipeline() {
     <section className="strip" aria-labelledby="pipeline-title">
       <div className="wrap">
         <div className="pipeline-head">
-          <span className="pipeline-kicker">{pipeline.kicker}</span>
           <h2 id="pipeline-title">{pipeline.title}</h2>
         </div>
         <ol className="pipeline">

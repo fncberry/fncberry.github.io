@@ -170,11 +170,7 @@ export function About() {
       <div className="wrap two-col">
         <div>
           <div className="kicker">04 — ABOUT ME</div>
-          <h2 id="about-title">
-            개발 역량과
-            <br />
-            배움의 배경
-          </h2>
+          <h2 id="about-title">개발 역량과 배움의 배경</h2>
         </div>
         <div>
           <div className="capabilities">

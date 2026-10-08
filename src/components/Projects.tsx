@@ -1,9 +1,11 @@
+import type { ReactNode } from "react";
 import { projects } from "@/data/projects";
 import type { Project } from "@/data/types";
 import { existingShots } from "@/lib/assets";
 import { ExternalLink } from "./ExternalLink";
 import { ShotGallery } from "./ShotGallery";
 import { ContentDialog } from "./ContentDialog";
+import { ProjectSlider } from "./ProjectSlider";
 
 function ProjectMeta({ project }: { project: Project }) {
   return (
@@ -16,7 +18,8 @@ function ProjectMeta({ project }: { project: Project }) {
   );
 }
 
-function ProjectText({ project }: { project: Project }) {
+/** action: 링크 줄 오른쪽 끝에 붙는 버튼 (예: 구현 자세히 보기) */
+function ProjectText({ project, action }: { project: Project; action?: ReactNode }) {
   const titleId = `${project.id}-title`;
   return (
     <>
@@ -52,6 +55,7 @@ function ProjectText({ project }: { project: Project }) {
             {link.label}
           </ExternalLink>
         ))}
+        {action}
       </div>
     </>
   );
@@ -93,9 +97,8 @@ function FeatureProject({ project }: { project: Project }) {
         {shots.length ? <ShotGallery shots={shots} /> : null}
       </div>
       <div className="feature-body">
-        <ProjectText project={project} />
+        <ProjectText project={project} action={<Details project={project} />} />
       </div>
-      <Details project={project} />
     </article>
   );
 }
@@ -139,36 +142,22 @@ function CompactProject({ project }: { project: Project }) {
 }
 
 export function Projects() {
-  const features = projects.filter((p) => p.layout === "feature");
-  const compacts = projects.filter((p) => p.layout === "compact");
   return (
     <section id="work" className="section" aria-labelledby="projects-heading">
       <div className="wrap">
-        <div className="section-head">
-          <div>
-            <div className="kicker">01 — DEVELOPMENT EXPERIENCE</div>
-            <h2 id="projects-heading">문제에서 시작한 프로젝트</h2>
-          </div>
-        </div>
-        <ol className="project-index" aria-label="프로젝트 목록">
-          {projects.map((p, i) => (
-            <li key={p.id}>
-              <a href={`#${p.id}`}>
-                <span className="idx">{String(i + 1).padStart(2, "0")}</span>
-                <strong>{p.shortTitle ?? p.title}</strong>
-                <small>{p.summary}</small>
-              </a>
-            </li>
-          ))}
-        </ol>
-        <div className="features">
-          {features.map((p) => (
-            <FeatureProject key={p.id} project={p} />
-          ))}
-        </div>
-        {compacts.map((p) => (
-          <CompactProject key={p.id} project={p} />
-        ))}
+        <ProjectSlider
+          head={
+            <div>
+              <div className="kicker">01 — DEVELOPMENT EXPERIENCE</div>
+              <h2 id="projects-heading">문제에서 시작한 프로젝트</h2>
+            </div>
+          }
+          items={projects.map((p) => ({ id: p.id, title: p.shortTitle ?? p.title }))}
+        >
+          {projects.map((p) =>
+            p.layout === "feature" ? <FeatureProject key={p.id} project={p} /> : <CompactProject key={p.id} project={p} />,
+          )}
+        </ProjectSlider>
       </div>
     </section>
   );
