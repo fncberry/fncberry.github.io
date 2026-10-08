@@ -2,11 +2,11 @@ import type { Link, PipelineStep } from "./types";
 
 export const site = {
   url: "https://fncberry.github.io",
-  title: "FNCBERRY — 김민서의 포트폴리오",
+  title: "김민서 · AI 시대의 풀스택 프로그래머 | FNCBERRY",
   description:
-    "김민서의 개발 포트폴리오. 기획부터 배포까지 혼자서도 끝까지 만드는 개발자. 택시투게더, 원스토어 출시 앱 로컬퀘스트를 소개합니다.",
-  ogTitle: "김민서 · fncberry 포트폴리오",
-  ogDescription: "일상의 문제를 서비스로 풀다. 기획부터 배포까지 혼자서도 끝까지 만드는 개발자 김민서의 포트폴리오.",
+    "AI 시대의 풀스택 프로그래머 김민서의 포트폴리오. 기획부터 배포까지 혼자서도 끝까지 만듭니다. 원스토어 출시 앱 로컬퀘스트와 택시투게더를 소개합니다.",
+  ogTitle: "김민서 · AI 시대의 풀스택 프로그래머",
+  ogDescription: "일상의 문제를 서비스로 풀다. 기획부터 배포까지 혼자서도 끝까지 만드는 김민서의 포트폴리오.",
 };
 
 export const profile = {
@@ -19,7 +19,8 @@ export const profile = {
 };
 
 export const hero = {
-  eyebrow: "FNCBERRY / PERSONAL PORTFOLIO",
+  /** 히어로 맨 위 슬로건 */
+  eyebrow: "AI 시대의 풀스택 프로그래머",
   titleTop: "일상의 문제를",
   titleAccent: "서비스로 풀다.",
   greeting: "안녕하세요, 김민서입니다.",
@@ -52,16 +53,16 @@ export const contact = {
   kicker: "05 — GET IN TOUCH",
   title: ["새로운 이야기는", "여기서 시작해요."],
   lead: "프로젝트 이야기, 협업 제안, 가벼운 인사도 좋습니다.",
+  /** 연락 채널. handle은 링크 옆에 보이는 아이디·주소 */
   socials: [
-    { label: "GitHub", href: "https://github.com/fncberry" },
-    { label: "solved.ac", href: "https://solved.ac/profile/fncberry" },
-    { label: "Dreamhack", href: "https://dreamhack.io/users/39311" },
-    { label: "Discord", href: "https://discord.com/users/473786591870058518" },
-    { label: "Instagram", href: "https://www.instagram.com/h.f.kms/" },
-  ] satisfies Link[],
+    { label: "GitHub", handle: "github.com/fncberry", href: "https://github.com/fncberry" },
+    { label: "solved.ac", handle: "fncberry", href: "https://solved.ac/profile/fncberry" },
+    { label: "Discord", handle: "김민서", href: "https://discord.com/users/473786591870058518" },
+    { label: "Instagram", handle: "@h.f.kms", href: "https://www.instagram.com/h.f.kms/" },
+  ] satisfies (Link & { handle: string })[],
 };
 
 export const education = [
-  { school: "고려대학교", detail: "정보대학 컴퓨터학과 · 26학번", period: "2026 — 재학" },
+  { school: "고려대학교", detail: "정보대학 컴퓨터학과 26학번", period: "2026 — 재학" },
   { school: "한국디지털미디어고등학교", detail: "웹프로그래밍과 22기", period: "2023 — 2025" },
 ];

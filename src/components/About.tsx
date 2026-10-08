@@ -43,7 +43,17 @@ function CapabilityCards() {
               <span key={c}>{c}</span>
             ))}
           </div>
-          {card.proof ? <p className="cap-proof">{card.proof}</p> : null}
+          {card.proof ? (
+            <p className="cap-proof">
+              {card.proofHref ? (
+                <a href={card.proofHref}>
+                  {card.proof} <span aria-hidden="true">→</span>
+                </a>
+              ) : (
+                card.proof
+              )}
+            </p>
+          ) : null}
           {card.solvedBadge ? <SolvedBadge handle={profile.handle} /> : null}
         </article>
       ))}

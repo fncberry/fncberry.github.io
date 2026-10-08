@@ -81,10 +81,12 @@ export type CapabilityCard = {
   chips: string[];
   /** 카드 아래 근거 한 줄 (다른 섹션과 겹치면 생략) */
   proof?: string;
+  /** proof를 누르면 이동할 곳 (예: 수상 목록) */
+  proofHref?: string;
   solvedBadge?: boolean;
 };
 
-export type TrainingTone = "plan" | "design" | "build" | "ship" | "data";
+export type TrainingTone = "plan" | "design" | "build" | "db" | "ship" | "data";
 
 export type TrainingSegment = { label: string; tone: TrainingTone };
 
