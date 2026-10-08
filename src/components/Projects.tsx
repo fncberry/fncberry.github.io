@@ -3,6 +3,7 @@ import type { Project } from "@/data/types";
 import { existingShots } from "@/lib/assets";
 import { ExternalLink } from "./ExternalLink";
 import { ShotGallery } from "./ShotGallery";
+import { ContentDialog } from "./ContentDialog";
 
 function ProjectMeta({ project }: { project: Project }) {
   return (
@@ -59,18 +60,26 @@ function ProjectText({ project }: { project: Project }) {
 function Details({ project }: { project: Project }) {
   if (!project.details?.length) return null;
   return (
-    <details className="more">
-      <summary>구현 자세히 보기</summary>
-      <ul className="contributions">
-        {project.details.map((d) => (
-          <li key={d.title}>
-            <strong>{d.title}</strong>
-            <span>{d.text}</span>
-          </li>
-        ))}
-      </ul>
-      {project.note ? <p className="project-note">{project.note}</p> : null}
-    </details>
+    <ContentDialog
+      id={`${project.id}-details`}
+      kicker="PROJECT / IMPLEMENTATION"
+      title={`${project.title} 구현 이야기`}
+      description={`${project.role} · ${project.details.length}개 구현 항목`}
+      triggerClassName="project-details-trigger"
+      trigger={<><span>구현 자세히 보기</span><span className="project-details-count">{project.details.length}개 항목</span><span className="project-details-arrow" aria-hidden="true">↗</span></>}
+    >
+      <div className="project-details-content">
+        <ol className="project-details-list">
+          {project.details.map((d, i) => (
+            <li key={d.title}>
+              <span className="project-details-number" aria-hidden="true">{String(i + 1).padStart(2, "0")}</span>
+              <div><h4>{d.title}</h4><p>{d.text}</p></div>
+            </li>
+          ))}
+        </ol>
+        {project.note ? <p className="project-note">{project.note}</p> : null}
+      </div>
+    </ContentDialog>
   );
 }
 
@@ -85,8 +94,8 @@ function FeatureProject({ project }: { project: Project }) {
       </div>
       <div className="feature-body">
         <ProjectText project={project} />
-        <Details project={project} />
       </div>
+      <Details project={project} />
     </article>
   );
 }
@@ -95,9 +104,6 @@ function CompactProject({ project }: { project: Project }) {
   const shots = existingShots(project.shots);
   return (
     <article className="project compact" id={project.id} aria-labelledby={`${project.id}-title`}>
-      <div className="compact-body">
-        <ProjectText project={project} />
-      </div>
       <div className={`compact-visual ${project.theme}-visual`}>
         <div className="case-index">{project.index}</div>
         <p className="feature-tagline">{project.tagline}</p>
@@ -115,6 +121,9 @@ function CompactProject({ project }: { project: Project }) {
             <span className="reading-caption">{project.concept.caption}</span>
           </div>
         ) : null}
+      </div>
+      <div className="compact-body">
+        <ProjectText project={project} />
       </div>
       {shots.length ? (
         <div className="case-shots">

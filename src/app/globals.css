@@ -27,9 +27,9 @@
 
 /* Project index: 세 프로젝트를 한눈에 보고 바로 이동 */
 .project-index{list-style:none;padding:0;margin:0 0 34px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
-.project-index a{display:flex;flex-direction:column;gap:6px;height:100%;background:white;border:1px solid var(--line);padding:18px 20px;transition:border-color .2s,transform .2s}
+.project-index a{position:relative;display:flex;flex-direction:column;gap:6px;height:100%;background:white;border:1px solid var(--line);padding:18px 20px;transition:border-color .2s,transform .2s}
 .project-index a:hover,.project-index a:focus-visible{border-color:var(--blue);transform:translateY(-2px)}
-.project-index .idx{font:12px var(--mono);color:var(--blue);letter-spacing:.5px}
+.project-index a:after{content:"↓";content:"↓" / "";position:absolute;top:16px;right:18px;font:15px var(--mono);color:var(--muted);transition:transform .2s,color .2s}.project-index a:hover:after,.project-index a:focus-visible:after{color:var(--blue);transform:translateY(3px)}.project-index .idx{font:12px var(--mono);color:var(--blue);letter-spacing:.5px}
 .project-index strong{font-size:18px;letter-spacing:-.03em;line-height:1.4}
 .project-index small{font-size:13px;color:var(--muted);line-height:1.6}
 /* Screenshots: 각 프로젝트 카드 하단 전체 폭 */
@@ -56,10 +56,12 @@
 /* Problem Solving 배지 */
 .ps-badge{display:inline-block;margin-top:14px}
 .ps-badge img{display:block;height:84px;width:auto}
-@media(max-width:800px){.project-index{grid-template-columns:1fr;gap:8px}.project-index a{flex-direction:row;align-items:baseline;gap:14px;padding:14px 18px}.project-index small{display:none}.project-index strong{font-size:16px}.case-shots{padding:26px 0 24px}.case-shots-head{padding:0 28px}.shots{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;padding:0 28px 8px;gap:16px;scrollbar-width:thin}.shots>li{flex:0 0 min(62vw,230px);scroll-snap-align:center}.shots.wide>li{flex-basis:min(84vw,420px)}}
+@media(max-width:800px){.project-index{grid-template-columns:1fr;gap:8px}.project-index a{flex-direction:row;align-items:baseline;gap:14px;padding:14px 44px 14px 18px}.project-index a:after{top:13px}.project-index small{display:none}.project-index strong{font-size:16px}.case-shots{padding:26px 0 24px}.case-shots-head{padding:0 28px}.shots{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;padding:0 28px 8px;gap:16px;scrollbar-width:thin}.shots>li{flex:0 0 min(62vw,230px);scroll-snap-align:center}.shots.wide>li{flex-basis:min(84vw,420px)}}
 @media(max-width:440px){.case-shots-head{padding:0 24px}.shots{padding:0 24px 8px}.awards-best .award{grid-template-columns:1fr;gap:8px}.award-results{align-items:flex-start}}
 /* Featured projects: 핵심이 한 화면(약 750px)에 들어오는 압축 레이아웃 */
 .features{display:grid;gap:28px}
+.project:target{border-color:var(--blue);animation:target-ring 2.4s ease-out}
+@keyframes target-ring{0%,40%{box-shadow:0 0 0 6px #224dff40}100%{box-shadow:0 0 0 6px #224dff00}}
 .feature{display:grid;grid-template-columns:minmax(0,1.12fr) minmax(0,1fr);scroll-margin-top:24px}
 .feature-shots{padding:30px 32px 26px;display:flex;flex-direction:column;min-width:0}
 .project .feature-tagline{font-size:clamp(24px,2.4vw,34px);font-weight:800;line-height:1.35;letter-spacing:-.045em;margin:12px 0 24px;color:inherit}
@@ -81,19 +83,26 @@
 .project-links .btn-primary:hover{background:#1638d9;color:white}
 .badge-live{display:inline-flex;align-items:center;gap:6px;color:#0f7a43!important;font-weight:700}
 .badge-live:before{content:'';width:7px;height:7px;border-radius:50%;background:#18a35a}
-.more{margin-top:18px;border-top:1px solid var(--line);padding-top:14px}
-.more summary{cursor:pointer;font-size:14px;font-weight:600;color:var(--muted);list-style:none;display:flex;align-items:center;gap:8px}
-.more summary::-webkit-details-marker{display:none}
-.more summary:after{content:'+';font:16px var(--mono);color:var(--blue)}
-.more[open] summary:after{content:'−'}
-.more summary:hover{color:var(--blue)}
-.more .contributions{margin:16px 0 0}
-.more .project-note{font-size:13px;margin:14px 0 0;color:var(--muted)}
-.compact{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);margin-top:28px;scroll-margin-top:24px}
+/* 구현 상세: 카드 크기를 유지하며 별도 팝업으로 표시 */
+.project-details-trigger{grid-column:1/-1;width:100%;display:flex;align-items:center;gap:12px;padding:15px 34px;border:0;border-top:1px solid var(--line);background:#fafbfe;color:var(--ink);font-size:14px;font-weight:600;text-align:left;cursor:pointer}
+.project-details-trigger:hover,.project-details-trigger:focus-visible{background:#f1f3fb;color:var(--blue)}
+.project-details-trigger:focus-visible{outline-offset:-3px}
+.project-details-count{font:12px var(--mono);color:var(--muted)}
+.project-details-arrow{margin-left:auto;font:20px var(--mono);color:var(--blue)}
+.project-details-content{padding-bottom:28px}
+.project-details-list{list-style:none;padding:0;margin:0}
+.project-details-list li{display:grid;grid-template-columns:28px minmax(0,1fr);gap:14px;padding:20px 0;border-top:1px solid var(--line)}
+.project-details-number{padding-top:3px;font:12px var(--mono);color:var(--blue)}
+.project-details-list h4{margin:0 0 8px;font-size:17px;line-height:1.5}
+.project-details-list p{margin:0;font-size:15px;line-height:1.85;color:var(--muted)}
+.project-details-content .project-note{margin:8px 0 0;padding:16px;background:var(--paper);font-size:13px;color:var(--muted)}
+@media(max-width:800px){.project-details-trigger{padding:14px 28px}}
+@media(max-width:440px){.project-details-trigger{padding:14px 24px}.project-details-count{display:none}.project-details-list li{gap:8px}.project-details-list p{font-size:14px}}
+.compact{display:grid;grid-template-columns:minmax(0,1.12fr) minmax(0,1fr);margin-top:28px;scroll-margin-top:24px}
 .compact-visual{padding:30px 32px;display:flex;flex-direction:column;justify-content:center;min-width:0}
 .compact-visual .project .reading-concept p,.compact-visual .reading-concept p{font-size:clamp(20px,2vw,26px)}
 .compact .case-shots{grid-column:1/-1}
-@media(max-width:1000px){.feature{grid-template-columns:1fr}.feature-shots .shots{max-width:620px}.compact{grid-template-columns:1fr}.compact-visual{order:-1}}
+@media(max-width:1000px){.feature{grid-template-columns:1fr}.feature-shots .shots{max-width:620px}.compact{grid-template-columns:1fr}}
 @media(max-width:800px){.feature-shots{padding:24px 0 22px}.feature-shots .case-index,.feature-tagline{padding:0 28px}.feature-shots .shots{display:flex;padding:0 28px 6px}.feature-body,.compact-body{padding:26px 28px}.compact-visual{padding:26px 28px}.feature h3,.compact h3{font-size:26px}}
 @media(max-width:440px){.feature-shots .case-index,.feature-tagline{padding:0 24px}.feature-shots .shots{padding:0 24px 6px}.feature-body,.compact-body,.compact-visual{padding:24px}.highlights li{grid-template-columns:1fr;gap:2px}}
 /* About: capabilities */
@@ -189,6 +198,32 @@
 .learning-stats dd{margin:0;font:600 28px/1.2 var(--mono);color:var(--ink);letter-spacing:-1px}
 .learning-stats dd small{font-size:14px;color:var(--muted);margin-left:2px;letter-spacing:0}
 .hours-bar{display:flex;height:34px;gap:2px}
+.training-units-trigger{display:block;width:100%;padding:0;border:0;background:transparent;color:var(--blue);text-align:left;cursor:pointer}
+.training-units-prompt{display:flex;align-items:center;justify-content:flex-end;gap:8px;margin-top:10px;font-size:13px;font-weight:600}
+.training-units-trigger:hover .training-units-prompt,.training-units-trigger:focus-visible .training-units-prompt{text-decoration:underline;text-underline-offset:4px}
+html{scrollbar-gutter:stable}
+html:has(.content-dialog[open]){overflow:hidden}
+.content-dialog{width:min(680px,calc(100% - 32px));max-width:none;max-height:calc(100vh - 48px);max-height:calc(100dvh - 48px);padding:0;border:1px solid var(--line);border-radius:16px;background:white;color:var(--ink);box-shadow:0 24px 80px #15171b30;overflow:hidden}
+.content-dialog[open]{display:flex;flex-direction:column}
+.content-dialog::backdrop{background:#15171b99}
+.content-dialog-header{flex:none;display:flex;align-items:flex-start;justify-content:space-between;gap:16px;padding:28px 28px 20px}
+.content-dialog-header .cap-kicker{margin-bottom:8px}
+.content-dialog .content-dialog-header h3{font-size:24px;margin:0;line-height:1.4}
+.content-dialog .content-dialog-header p{margin:8px 0 0;color:var(--muted);font-size:14px}
+.content-dialog-close{display:flex;align-items:center;gap:10px;flex:none;min-height:44px;padding:8px 12px;border:1px solid var(--line);border-radius:8px;background:white;color:var(--ink);font-size:13px;cursor:pointer}
+.content-dialog-close:hover{background:var(--paper)}
+.content-dialog-close span{font-size:20px;line-height:1}
+.content-dialog-scroll{min-height:0;overflow:auto;overscroll-behavior:contain;padding:0 28px}
+.content-dialog-scroll:focus-visible{outline:3px solid var(--blue);outline-offset:-3px}
+.training-units-table{width:100%;border-collapse:separate;border-spacing:0;font-size:14px;line-height:1.6;text-align:left}
+.training-units-table thead th{position:sticky;top:0;z-index:1;background:var(--paper);color:var(--muted);font-size:12px;font-weight:500;border-top:1px solid var(--line)}
+.training-units-table th,.training-units-table td{padding:13px 12px;border-bottom:1px solid var(--line)}
+.training-units-table tbody th{font-weight:500;overflow-wrap:anywhere}
+
+.training-units-table th:last-child,.training-units-table td:last-child{text-align:right;white-space:nowrap}
+.training-units-table td:last-child{font-family:var(--mono);font-variant-numeric:tabular-nums;color:var(--blue)}
+.training-units-note{flex:none;margin:0;padding:16px 28px 22px;font-size:12px;color:var(--muted)}
+@media(max-width:440px){.content-dialog-header{padding:20px 16px 16px;gap:8px}.content-dialog .content-dialog-header h3{font-size:20px}.content-dialog-scroll{padding:0 12px}.training-units-table{font-size:13px}.training-units-table th,.training-units-table td{padding:12px 6px}.training-units-note{padding:14px 16px 18px}}
 .seg{flex-basis:0;min-width:0;display:flex;align-items:center;padding:0 8px;overflow:hidden}
 .seg b{font:500 11px var(--mono);white-space:nowrap}
 .seg-plan{background:#224dff;color:white}.seg-design{background:#7b93ff;color:white}.seg-build{background:#b3c1ff;color:#15236b}.seg-ship{background:#dde3ff;color:#15236b}.seg-data{background:#15171b;color:white}
@@ -219,4 +254,4 @@
 .teach-list li.planned small{color:var(--muted)}
 .teach-list li span em{font-style:normal;font-size:11px;color:var(--blue);border:1px solid #c9d3ff;padding:0 5px;margin-left:6px;letter-spacing:.3px}
 @media(max-width:900px){.teach-list{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:600px){.teach-list{grid-template-columns:1fr}}
-@media(prefers-reduced-motion:reduce){.project-index a,.shot img{transition:none}}
+@media(prefers-reduced-motion:reduce){.project-index a,.project-index a:after,.shot img{transition:none}.project:target{animation:none;box-shadow:0 0 0 4px #224dff40}}

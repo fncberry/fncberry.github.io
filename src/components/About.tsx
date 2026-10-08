@@ -1,6 +1,7 @@
 import { aiCard, capabilityCards, teaching, training } from "@/data/about";
 import { education, profile } from "@/data/profile";
 import { SolvedBadge } from "./SolvedBadge";
+import { TrainingUnits } from "./TrainingUnits";
 
 const pad = (n: number) => String(n).padStart(2, "0");
 
@@ -78,13 +79,15 @@ function Training() {
           ))}
         </dl>
       </div>
-      <div className="hours-bar" role="img" aria-label={`분야별 이수시간: ${summary}`}>
-        {training.segments.map((s) => (
-          <span key={s.tone} className={`seg seg-${s.tone}`} style={{ flexGrow: s.hours }} title={`${s.label} ${s.hours}시간`}>
-            <b>{s.hours}h</b>
-          </span>
-        ))}
-      </div>
+      <TrainingUnits units={training.units}>
+        <span className="hours-bar" role="img" aria-label={`분야별 이수시간: ${summary}`}>
+          {training.segments.map((s) => (
+            <span key={s.tone} className={`seg seg-${s.tone}`} style={{ flexGrow: s.hours }} title={`${s.label} ${s.hours}시간`}>
+              <b>{s.hours}h</b>
+            </span>
+          ))}
+        </span>
+      </TrainingUnits>
       <ul className="hours-legend">
         {training.segments.map((s) => (
           <li key={s.tone}>

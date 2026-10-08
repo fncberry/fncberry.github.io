@@ -44,7 +44,6 @@ export const training = {
   stats: [
     { label: "총 이수", value: "598", unit: "h" },
     { label: "능력단위", value: "19", unit: "개" },
-    { label: "성취도 A", value: "18", unit: "/19" },
   ],
   segments: [
     { label: "기획", hours: 107, tone: "plan" },
@@ -53,6 +52,28 @@ export const training = {
     { label: "배포", hours: 61, tone: "ship" },
     { label: "데이터 분석", hours: 133, tone: "data" },
   ] satisfies TrainingSegment[],
+  // 성적표 순서. 같은 능력단위도 학기별 이수 내역을 각각 표시합니다.
+  units: [
+    { grade: 1, semester: 1, name: "IoT 서비스 모형 기획", hours: 16 },
+    { grade: 1, semester: 1, name: "IoT 응용소프트웨어 기획", hours: 36 },
+    { grade: 1, semester: 2, name: "IoT 서비스 모형 기획", hours: 37 },
+    { grade: 1, semester: 2, name: "IoT 응용소프트웨어 기획", hours: 18 },
+    { grade: 2, semester: 1, name: "화면 구현", hours: 18 },
+    { grade: 2, semester: 1, name: "UI 디자인", hours: 33 },
+    { grade: 2, semester: 2, name: "화면 구현", hours: 41 },
+    { grade: 2, semester: 2, name: "UI 테스트", hours: 9 },
+    { grade: 3, semester: 1, name: "데이터베이스 요구사항 분석", hours: 40 },
+    { grade: 3, semester: 1, name: "데이터베이스 구현", hours: 29 },
+    { grade: 3, semester: 1, name: "프로그래밍 언어 활용", hours: 33 },
+    { grade: 3, semester: 1, name: "응용 SW 기초 기술 활용", hours: 36 },
+    { grade: 3, semester: 1, name: "빅데이터 분석 결과 시각화", hours: 22 },
+    { grade: 3, semester: 1, name: "탐색적 데이터 분석", hours: 49 },
+    { grade: 3, semester: 2, name: "SQL활용", hours: 58 },
+    { grade: 3, semester: 2, name: "애플리케이션 배포", hours: 31 },
+    { grade: 3, semester: 2, name: "개발자 환경 구축", hours: 30 },
+    { grade: 3, semester: 2, name: "분석 데이터 피처(Feature) 엔지니어링", hours: 29 },
+    { grade: 3, semester: 2, name: "빅데이터 분석 모델링", hours: 33 },
+  ],
   dataTrack: {
     title: "Data Analysis",
     meta: "빅데이터 분석 · 133h",

@@ -31,7 +31,7 @@ export type Project = {
   highlights: Highlight[];
   tags: string[];
   links: Link[];
-  /** 'feature'에서 접어 두는 상세 설명 */
+  /** 'feature'에서 팝업으로 표시하는 상세 설명 */
   details?: Highlight[];
   note?: string;
   shots: Shot[];
