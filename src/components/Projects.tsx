@@ -133,7 +133,7 @@ export function Projects() {
   const features = projects.filter((p) => p.layout === "feature");
   const compacts = projects.filter((p) => p.layout === "compact");
   return (
-    <section id="work" className="section">
+    <section id="work" className="section" aria-labelledby="projects-heading">
       <div className="wrap">
         <div className="section-head">
           <div>

@@ -3,11 +3,11 @@ import { OrgLogo } from "./OrgLogo";
 
 export function Activities() {
   return (
-    <section id="activities" className="section">
+    <section id="activities" className="section" aria-labelledby="activities-title">
       <div className="wrap two-col">
         <div>
           <div className="kicker">02 — EXPERIENCE</div>
-          <h2>활동 및 경험</h2>
+          <h2 id="activities-title">활동 및 경험</h2>
         </div>
         <ul className="experience-list">
           {activities.map((a) => (

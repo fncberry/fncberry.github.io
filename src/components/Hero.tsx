@@ -19,7 +19,7 @@ export function Hero() {
               key={app.href}
               className={`hero-app app-${app.side}`}
               href={app.href}
-              aria-label={`${app.label} 프로젝트로 이동`}
+              aria-label={`${app.tag} · ${app.label} 프로젝트로 이동`}
             >
               <img src={app.src} width={app.width} height={app.height} alt="" decoding="async" />
               <span className="app-tag">

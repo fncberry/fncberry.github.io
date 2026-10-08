@@ -4,10 +4,10 @@ import { ExternalLink } from "./ExternalLink";
 
 export function Contact() {
   return (
-    <section id="contact" className="contact">
+    <section id="contact" className="contact" aria-labelledby="contact-title">
       <div className="wrap">
         <div className="kicker">{contact.kicker}</div>
-        <h2>
+        <h2 id="contact-title">
           {contact.title[0]}
           <br />
           {contact.title[1]}

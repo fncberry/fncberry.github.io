@@ -3,11 +3,11 @@ import { OrgLogo } from "./OrgLogo";
 
 export function Awards() {
   return (
-    <section id="journey" className="section">
+    <section id="journey" className="section" aria-labelledby="awards-title">
       <div className="wrap two-col">
         <div>
           <div className="kicker">03 — AWARDS</div>
-          <h2>주요 수상</h2>
+          <h2 id="awards-title">주요 수상</h2>
         </div>
         <ul className="awards awards-best">
           {awards.map((award) => (

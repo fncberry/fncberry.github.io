@@ -60,7 +60,7 @@ function CapabilityCards() {
 function Training() {
   const summary = training.segments.map((s) => `${s.label} ${s.hours}시간`).join(", ");
   return (
-    <div className="learning" aria-labelledby="learning-title">
+    <section className="learning" aria-labelledby="learning-title">
       <div className="learning-head">
         <div>
           <div className="cap-kicker">{training.kicker}</div>
@@ -109,13 +109,13 @@ function Training() {
           ))}
         </ol>
       </div>
-    </div>
+    </section>
   );
 }
 
 function Teaching() {
   return (
-    <div className="learning teaching" aria-labelledby="teaching-title">
+    <section className="learning teaching" aria-labelledby="teaching-title">
       <div className="learning-head">
         <div>
           <div className="cap-kicker">{teaching.kicker}</div>
@@ -140,7 +140,7 @@ function Teaching() {
           </li>
         ))}
       </ol>
-    </div>
+    </section>
   );
 }
 
@@ -163,11 +163,11 @@ function Education() {
 
 export function About() {
   return (
-    <section id="about" className="section">
+    <section id="about" className="section" aria-labelledby="about-title">
       <div className="wrap two-col">
         <div>
           <div className="kicker">04 — ABOUT ME</div>
-          <h2>
+          <h2 id="about-title">
             개발 역량과
             <br />
             배움의 배경

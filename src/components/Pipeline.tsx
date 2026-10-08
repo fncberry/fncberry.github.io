@@ -14,8 +14,9 @@ export function Pipeline() {
               <a href={step.href}>
                 <span className="step-top">
                   <span className="step-no">{step.no}</span>
-                  <span className="step-hours" title="NCS 이수시간">
-                    NCS {step.ncsHours}h
+                  <span className="step-hours">
+                    <span aria-hidden="true">NCS {step.ncsHours}h</span>
+                    <span className="sr-only">NCS 이수시간 {step.ncsHours}시간</span>
                   </span>
                 </span>
                 <strong>{step.name}</strong>
