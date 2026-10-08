@@ -74,7 +74,10 @@ export function TrainingUnits({ segments, units }: { segments: TrainingSegment[]
                     {current.units.map((u) => u.name).join(" · ")}
                   </>
                 ) : (
-                  "분야를 가리키면 능력단위가, 누르면 자세한 목록이 나옵니다"
+                  <>
+                    <span className="hint-hover">분야를 가리키면 능력단위가, 누르면 자세한 목록이 나옵니다</span>
+                    <span className="hint-touch">분야를 누르면 능력단위 목록이 열립니다</span>
+                  </>
                 )}
               </p>
               <button type="button" className="training-units-open" aria-haspopup="dialog" onClick={() => openAt(null)}>

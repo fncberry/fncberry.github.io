@@ -59,7 +59,7 @@
 .project-tabs a:hover,.project-tabs a:focus-visible{border-color:var(--blue);color:var(--blue)}
 .project-tabs .idx{font:11px var(--mono);color:var(--blue)}
 .project-tabs a[aria-current="true"]{background:var(--blue);border-color:var(--blue);color:white}
-.project-tabs a[aria-current="true"] .idx{color:#cbd4ff}
+.project-tabs a[aria-current="true"] .idx{color:#e0e6ff}
 /* 화살표: 가운데 카드 양 끝에 반투명으로 */
 .slider-arrow{position:absolute;top:50%;z-index:5;width:52px;height:52px;margin-top:-26px;display:grid;place-items:center;padding:0;border:1px solid #ffffffb3;border-radius:50%;background:#ffffffa6;-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);box-shadow:0 10px 28px -14px #15171b80;color:var(--ink);font:18px var(--mono);cursor:pointer;transition:background .2s,color .2s,border-color .2s}
 .slider-arrow:hover{background:var(--blue);border-color:var(--blue);color:white}
@@ -228,7 +228,7 @@ html:has(.content-dialog[open]){overflow:hidden}
 @media(max-width:440px){.content-dialog-header{padding:20px 16px 16px;gap:8px}.content-dialog .content-dialog-header h3{font-size:20px}.content-dialog-scroll{padding:0 12px}.training-units-note{padding:14px 16px 18px}}
 .seg{flex-basis:0;min-width:0;display:flex;align-items:center;padding:0 8px;overflow:hidden;border:0;font:inherit;text-align:left;cursor:pointer;transform-origin:bottom;transition:opacity .2s,transform .2s}
 .seg b{font:500 11px var(--mono);white-space:nowrap}
-.seg-plan{background:#224dff;color:white}.seg-design{background:#7b93ff;color:white}.seg-build{background:#b3c1ff;color:#15236b}.seg-db{background:#3d4f9e;color:white}.seg-ship{background:#dde3ff;color:#15236b}.seg-data{background:#15171b;color:white}
+.seg-plan{background:#224dff;color:white}.seg-design{background:#7b93ff;color:#15236b}.seg-build{background:#b3c1ff;color:#15236b}.seg-db{background:#3d4f9e;color:white}.seg-ship{background:#dde3ff;color:#15236b}.seg-data{background:#15171b;color:white}
 .hours-legend{list-style:none;padding:0;margin:12px 0 0;display:flex;flex-wrap:wrap;gap:6px 18px;font-size:13px;color:var(--ink)}
 .hours-legend li{display:flex}
 .legend-item{display:flex;align-items:center;gap:7px;padding:2px 0;border:0;background:none;font:inherit;color:inherit;cursor:pointer;transition:opacity .2s}.legend-item span{font:12px var(--mono);color:var(--muted)}
@@ -359,3 +359,16 @@ html{scroll-snap-type:y proximity}
 @media(max-width:440px){.contact-links a{grid-template-columns:minmax(0,1fr) auto;gap:2px 12px}.contact-links span{grid-column:1;grid-row:2}.contact-links i{grid-row:1/3;align-self:center}}
 @media(prefers-reduced-motion:reduce){.contact-links a,.contact-links i{transition:none}}
 .cap-proof a:hover{color:var(--blue);text-decoration:underline;text-underline-offset:4px}.cap-proof a span{color:var(--blue)}
+/* 검토 반영 */
+/* 1. 1000px 이하: 카드가 길어 세로 중앙 화살표가 본문을 가리므로, 슬라이더 위 오른쪽에 따로 한 줄로 */
+@media(max-width:1000px){.slider{padding-top:58px}.slider-arrow{top:2px;margin-top:0;border-color:var(--line);background:white}.slider-arrow.prev{left:auto;right:52px}.slider-arrow.next{right:0}}
+/* 2. 1001~1200px: 84% 폭이면 카드가 좁아 길어지므로 넓히고 뒤 카드는 덜 보이게 */
+@media(min-width:1001px) and (max-width:1200px){.slide{width:92%}.slide[data-offset="-1"]{transform:translateX(-11%) scale(.84)}.slide[data-offset="1"]{transform:translateX(11%) scale(.84)}.slider-arrow.prev{left:calc(4% - 26px)}.slider-arrow.next{right:calc(4% - 26px)}}
+/* 3. 좁은 화면: AI 카드 라벨과 도구 칩을 두 줄로 */
+@media(max-width:600px){.ai-card-top{flex-direction:column;align-items:flex-start;gap:10px}}
+/* 4. 터치 기기는 가리키기 대신 누르기 안내, 좁은 화면은 줄바꿈 허용 */
+.hint-touch{display:none}
+@media(hover:none){.hint-hover{display:none}.hint-touch{display:inline}}
+@media(max-width:600px){.hours-info{flex-wrap:wrap;gap:6px 16px}.hours-detail{white-space:normal}}
+/* 5. 좁은 화면: 파이프라인 단계 번호와 NCS 시간 태그를 두 줄로 */
+@media(max-width:600px){.step-top{flex-direction:column;align-items:flex-start;gap:4px}}

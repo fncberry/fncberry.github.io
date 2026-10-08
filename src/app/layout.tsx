@@ -28,7 +28,8 @@ export const metadata: Metadata = {
     title: site.ogTitle,
     description: site.ogDescription,
     locale: "ko_KR",
-    images: [{ url: "/assets/og.png", width: 1200, height: 630 }],
+    // 이미지를 바꾸면 v 숫자를 올려야 카카오톡·슬랙 등이 예전 미리보기를 다시 가져옴
+    images: [{ url: "/assets/og.png?v=2", width: 1200, height: 630, alt: "김민서 · AI 시대의 풀스택 프로그래머 — 일상의 문제를 서비스로 풀다." }],
   },
   twitter: { card: "summary_large_image" },
 };

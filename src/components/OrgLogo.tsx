@@ -10,7 +10,7 @@ export function OrgLogo({ logo }: { logo: OrgLogoData }) {
   }
   return (
     <div className={`org-logo ${logo.variant ?? ""}`.trim()}>
-      <img src={logo.src} alt={logo.alt} loading="lazy" />
+      <img src={logo.src} width={logo.width} height={logo.height} alt={logo.alt} loading="lazy" />
     </div>
   );
 }

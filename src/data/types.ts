@@ -44,7 +44,7 @@ export type Project = {
 };
 
 export type OrgLogo =
-  | { kind: "image"; src: string; alt: string; variant?: "dark" | "fill" | "wide" | "round" }
+  | { kind: "image"; src: string; width: number; height: number; alt: string; variant?: "dark" | "fill" | "wide" | "round" }
   | { kind: "mono"; text: string };
 
 export type Activity = {
