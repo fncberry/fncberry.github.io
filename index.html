@@ -1,0 +1,493 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>FNCBERRY — 김민서의 포트폴리오</title>
+<meta name="description" content="김민서의 개발 포트폴리오. 기획부터 배포까지 혼자서도 끝까지 만드는 개발자. 택시투게더, 원스토어 출시 앱 로컬퀘스트를 소개합니다.">
+<meta name="theme-color" content="#224dff">
+<link rel="canonical" href="https://fncberry.github.io/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://fncberry.github.io/">
+<meta property="og:title" content="김민서 · fncberry 포트폴리오">
+<meta property="og:description" content="일상의 문제를 서비스로 풀다. 기획부터 배포까지 혼자서도 끝까지 만드는 개발자 김민서의 포트폴리오.">
+<meta property="og:image" content="https://fncberry.github.io/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="ko_KR">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23224dff'/%3E%3Cpath d='M9 7h16v5H14v4h9v5h-9v7H9z' fill='white'/%3E%3C/svg%3E">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=Noto+Sans+KR:wght@400;500;600;700;800;900&display=swap');
+:root{--blue:#224dff;--ink:#15171b;--muted:#606775;--line:#dce0e8;--paper:#f8f9fc;--mono:'IBM Plex Mono',monospace}*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}body{margin:0;background:var(--paper);color:var(--ink);font-family:'Noto Sans KR',sans-serif;font-size:16px;line-height:1.75;word-break:keep-all}a{color:inherit;text-decoration:none}button{font:inherit}a,button{-webkit-tap-highlight-color:transparent}a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var(--blue);outline-offset:6px}::selection{background:var(--blue);color:white}.wrap{max-width:1320px;margin:auto;padding:0 64px}.skip{position:fixed;left:20px;top:-100px;z-index:10;background:white;padding:12px}.skip:focus{top:10px}.header{border-bottom:1px solid var(--line);background:var(--paper)}.nav{min-height:90px;display:flex;justify-content:space-between;align-items:center;gap:30px}.brand{font-family:var(--mono);font-size:20px;font-weight:500;letter-spacing:-1px}.brand span{color:var(--blue)}.navlinks{display:flex;gap:32px;font-size:14px;font-weight:600}.navlinks a:hover{color:var(--blue)}.hero{padding-top:64px;padding-bottom:64px}.eyebrow{font:14px var(--mono);letter-spacing:1px;color:var(--muted);display:flex;align-items:center;gap:12px}.eyebrow:before{content:'';width:22px;height:2px;background:var(--blue)}.hero-title{font-size:clamp(58px,9.6vw,128px);line-height:1.12;letter-spacing:-.065em;margin:30px 0 38px;font-weight:900}.hero-title span{color:var(--blue)}.hero-bottom{display:grid;grid-template-columns:1.4fr 1fr;gap:60px;align-items:end}.hero h2{font-size:24px;letter-spacing:-.06em;font-weight:600;margin:0 0 12px}.hero p{max-width:580px;color:var(--muted);margin:0}.hero-aside{border-left:1px solid var(--line);padding-left:35px;display:flex;flex-direction:column;gap:10px}.hero-aside .name{font-size:22px;font-weight:700}.hero-aside .name small{font:14px var(--mono);color:var(--muted);margin-left:14px}.hero-links{display:flex;gap:23px;font-size:14px;text-decoration:underline;text-underline-offset:5px}.strip{background:var(--blue);color:white}.section{padding:90px 0;border-bottom:1px solid var(--line)}.section-head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:38px}.kicker{font:13px var(--mono);letter-spacing:1px;color:var(--blue);margin-bottom:14px}.section h2{font-size:38px;line-height:1.35;letter-spacing:-.05em;margin:0}.section-head p{color:var(--muted);font-size:14px;margin:0}.projects{display:grid;grid-template-columns:1.2fr 1fr;gap:28px}.project{background:white;border:1px solid var(--line);display:flex;flex-direction:column}.project-visual{height:275px;background:#e9edff;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center}.diagram{width:100%;height:100%;color:var(--blue)}.visual-label{position:absolute;top:20px;left:24px;font:12px var(--mono);color:#354785}.project-body{padding:30px;display:flex;flex:1;flex-direction:column}.project h3{font-size:25px;margin:0 0 12px;letter-spacing:-.04em}.project p{font-size:16px;color:var(--muted);margin:0 0 22px}.tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:25px}.tag{font:12px var(--mono);padding:5px 10px;border:1px solid var(--line);color:#4b5464}.project a{font-size:14px;font-weight:600;text-decoration:underline;text-underline-offset:5px;align-self:flex-start;margin-top:auto}.project a:hover{color:var(--blue)}.type-visual{background:#172032;color:white;align-items:flex-start;justify-content:center;flex-direction:column;padding:32px}.type-visual .visual-label{color:#aab6ce}.type-visual .sample{font:clamp(24px,3vw,38px) var(--mono);letter-spacing:-1px;margin-top:25px;line-height:1.7}.sample span{color:#9eafff;border-bottom:2px solid #9eafff}.type-visual small{font:12px var(--mono);color:#aab6ce;margin-top:14px}.two-col{display:grid;grid-template-columns:.72fr 1.6fr;gap:65px}.awards{list-style:none;padding:0;margin:0}.award{display:grid;grid-template-columns:72px 1fr;gap:20px;border-top:1px solid var(--line);padding:24px 0}.award:first-child{border-color:var(--ink);padding-top:22px}.year{font:22px var(--mono);color:var(--blue)}.award-title{font-size:17px;font-weight:600;margin:0 0 7px}.award-note{font-size:14px;color:var(--muted);margin:0}.award-item+.award-item{margin-top:19px}.medal{display:inline-block;font:12px var(--mono);color:var(--blue);padding:3px 8px;background:#e9edff;margin-top:9px}.side-copy{color:var(--muted);max-width:250px;margin-top:20px}.skill-row{display:grid;grid-template-columns:58px 1fr auto;padding:24px 0;border-bottom:1px solid var(--line);align-items:center;gap:18px}.skill-no{font:14px var(--mono);color:var(--muted)}.skill-name{font-size:25px;font-weight:600}.skill-role{font:14px var(--mono);color:var(--blue)}.education{margin-top:50px}.education h3{font-size:18px;margin:0 0 20px}.edu{display:flex;justify-content:space-between;gap:20px;padding:18px 0;border-top:1px solid var(--line)}.edu strong{font-weight:500}.edu small{display:block;font-size:14px;color:var(--muted)}.edu time{font:14px var(--mono);color:var(--muted);padding-top:5px}.contact{background:var(--blue);color:white;padding:74px 0 55px}.contact .kicker{color:#cbd4ff}.contact h2{font-size:clamp(36px,5vw,64px);line-height:1.4;letter-spacing:-.045em;margin:0 0 25px}.contact p{color:#e0e6ff;margin-bottom:30px}.contact-actions{display:flex;align-items:center;gap:20px;flex-wrap:wrap}.email{font:clamp(18px,3vw,30px) var(--mono);text-decoration:underline;text-underline-offset:8px}.copy{border:1px solid #9badff;color:white;background:transparent;padding:9px 15px;cursor:pointer;font-size:14px}.copy:hover{background:white;color:var(--blue)}.socials{display:flex;flex-wrap:wrap;gap:26px;margin-top:55px;padding-top:28px;border-top:1px solid #ffffff45;font:14px var(--mono)}.socials a:hover{text-decoration:underline}.footer{display:flex;justify-content:space-between;gap:25px;padding-top:28px;padding-bottom:28px;font:12px var(--mono);color:var(--muted)}.footer a{text-decoration:underline;text-underline-offset:4px}.status{font-size:14px;min-height:24px;margin-top:10px}.project-visual svg text{font-family:var(--mono)}
+@media(min-width:1600px){.hero{padding-top:85px;padding-bottom:85px}}
+@media(max-width:800px){.wrap{padding-left:28px;padding-right:28px}.nav{min-height:76px}.navlinks{gap:18px}.hero{padding-top:44px;padding-bottom:44px}.hero-title{font-size:clamp(53px,11vw,86px);margin:28px 0}.hero-bottom{grid-template-columns:1fr;gap:28px}.hero-aside{padding-left:0;border:0}.hero h2{font-size:22px}.section{padding:62px 0}.section h2{font-size:32px}.projects{grid-template-columns:1fr}.two-col{grid-template-columns:1fr;gap:32px}.side-copy{max-width:none}.section-head{align-items:start;flex-direction:column;gap:15px}.project-visual{height:250px}.type-visual .sample{font-size:34px}.contact{padding:55px 0 35px}.footer{flex-wrap:wrap}.skill-name{font-size:22px}}
+@media(max-width:440px){.wrap{padding-left:20px;padding-right:20px}.navlinks{gap:15px;font-size:13px}.navlinks a:nth-child(3){display:none}.brand{font-size:17px}.hero-title{font-size:14vw}.project-body{padding:24px}.award{grid-template-columns:58px 1fr;gap:12px}.year{font-size:20px}.skill-row{grid-template-columns:34px 1fr auto}.skill-role{font-size:12px}.edu{flex-direction:column;gap:5px}.contact-actions{gap:22px}.type-visual .sample{font-size:29px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+/* Featured development experience */
+.hero-title{font-size:clamp(54px,8.2vw,108px)}
+.case-studies{grid-template-columns:1fr;gap:34px}
+.case-study{display:grid;grid-template-columns:minmax(0,.87fr) minmax(0,1.25fr)}
+.case-visual{padding:34px;display:flex;flex-direction:column;min-width:0}
+.taxi-visual{background:#e9edff;color:#1536b4}
+.quest-visual{background:#172032;color:#f4f6ff}
+.case-index{font:12px var(--mono);letter-spacing:.7px;opacity:.8}
+.visual-heading{font-size:clamp(28px,3vw,42px);font-weight:800;line-height:1.4;letter-spacing:-.045em;margin:40px 0}
+.visual-foot{font-size:14px;margin-top:auto;padding-top:38px;opacity:.8}
+.fare-concept{margin:10px 0 35px}
+.fare-caption{font-size:14px;margin-bottom:18px}
+.fare-segments{display:grid;grid-template-columns:1fr 1.25fr 1fr;gap:3px}
+.fare-segments>div{background:#ced8ff;padding:20px 6px;text-align:center;border-top:3px solid #224dff}
+.fare-segments>div:nth-child(2){background:#224dff;color:white}
+.fare-segments strong{display:block;font-size:26px}.fare-segments span{display:block;font-size:14px;margin-top:4px}
+.fare-rule{font-size:14px;border-bottom:1px solid #bbc8f5;padding:18px 0}
+.quest-flow{list-style:none;padding:0;margin:0 0 30px}
+.quest-flow li{display:flex;gap:17px;align-items:center;padding:19px 0;border-top:1px solid #ffffff30}
+.quest-flow li>span{font:14px var(--mono);color:#aebdff}
+.quest-flow strong{display:block;font-size:17px;font-weight:500}.quest-flow small{display:block;font-size:14px;color:#b7c2d9;margin-top:4px}
+.case-study .project-body{padding:36px;min-width:0}
+.project-meta{display:flex;gap:10px 20px;flex-wrap:wrap;font-size:14px;margin-bottom:18px;color:var(--muted)}
+.project-meta span:first-child{color:var(--blue);font-weight:700}
+.case-study h3{font-size:34px;line-height:1.35;margin-bottom:16px}
+.case-study .case-lead{color:var(--ink);line-height:1.8;margin-bottom:25px}
+.contributions{list-style:none;padding:0;margin:0 0 26px}
+.contributions li+li{margin-top:19px}.contributions strong{display:block;font-size:16px;font-weight:600;margin-bottom:5px}.contributions li>span{display:block;font-size:15px;color:var(--muted);line-height:1.8}
+.scope-label{font-size:14px;color:var(--blue);border-top:1px solid var(--line);padding-top:18px;margin-bottom:16px}
+.case-study .tag{font-size:12px}.case-study .tags{margin-bottom:25px}
+.project-links{display:flex;gap:24px;flex-wrap:wrap;margin-top:auto}.project-links a{margin:0;font-size:15px}
+.case-study .project-note{font-size:13px;margin:16px 0 0;color:var(--muted)}
+.skill-detail{display:block;font-size:14px;color:var(--muted);margin-top:4px}.year-range{font-size:18px;line-height:1.5}
+@media(max-width:1000px){.case-study{grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr)}.case-visual{padding:26px}.case-study .project-body{padding:28px}.visual-heading{font-size:32px}.fare-segments span{font-size:12px}.skill-name{font-size:22px}}
+@media(max-width:800px){.hero-title{font-size:clamp(49px,9vw,72px)}.case-study{grid-template-columns:1fr}.case-visual{padding:28px}.visual-heading{font-size:36px;margin:28px 0}.fare-concept{margin:0;max-width:480px}.fare-segments span{font-size:14px}.quest-flow{margin:0}.visual-foot{padding-top:28px}.case-study .project-body{padding:28px}}
+@media(max-width:440px){.hero-title{font-size:12vw}.case-visual,.case-study .project-body{padding:24px}.visual-heading{font-size:30px}.case-study h3{font-size:29px}.skill-name{font-size:20px}.skill-role{font-size:12px}.project-meta{gap:8px 14px}}
+.awards-best .award{grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:20px}.awards-best .award-title{margin:0;line-height:1.65}.award-prize{font-size:16px;font-weight:700;color:var(--blue);white-space:nowrap}.award-track{font-size:15px;font-weight:400;color:var(--muted)}@media(max-width:440px){.awards-best .award{gap:14px}.awards-best .award-title{font-size:16px}}
+.award-english{display:block;margin-top:4px;font-size:14px;font-weight:400;line-height:1.5;color:var(--muted);overflow-wrap:anywhere}
+.skill-row>div{min-width:0}.skill-name{overflow-wrap:anywhere}@media(max-width:440px){.skill-row{grid-template-columns:30px minmax(0,1fr)}.skill-row .skill-role{grid-column:2;margin-top:-10px;font-size:13px}.skill-row .skill-name{font-size:20px}}
+.experience-list{list-style:none;padding:0;margin:0}.experience{padding:26px 0;border-top:1px solid var(--line)}.experience:first-child{border-color:var(--ink)}.experience-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px 24px;flex-wrap:wrap}.experience h3{font-size:23px;line-height:1.5;letter-spacing:-.025em;margin:0}.experience-period{font-size:14px;color:var(--muted)}.experience-org{font-size:15px;color:var(--muted);margin:8px 0 14px;line-height:1.8}.experience-role{font-size:17px;font-weight:600;color:var(--blue);margin:0;line-height:1.7}@media(max-width:600px){.nav{flex-wrap:wrap;padding-top:18px;padding-bottom:18px;gap:14px}.navlinks{width:100%;justify-content:space-between;gap:12px}.navlinks a:nth-child(3){display:inline}.navlinks a[href="#about"]{display:none}.experience h3{font-size:21px}}
+
+.english-visual{background:#e6f1ff;color:#153d69}.reading-concept{border-top:1px solid #153d6940;border-bottom:1px solid #153d6940;padding:22px 0}.reading-label{font-size:14px}.reading-concept p{font:clamp(22px,2.4vw,32px)/1.6 var(--mono);color:#153d69;margin:20px 0}.reading-caption{font-size:13px;color:#4d6683}.working-title{font-size:16px;font-weight:400;white-space:nowrap;color:var(--muted)}
+
+/* Project index: 세 프로젝트를 한눈에 보고 바로 이동 */
+.project-index{list-style:none;padding:0;margin:0 0 34px;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.project-index a{display:flex;flex-direction:column;gap:6px;height:100%;background:white;border:1px solid var(--line);padding:18px 20px;transition:border-color .2s,transform .2s}
+.project-index a:hover{border-color:var(--blue);transform:translateY(-2px)}
+.project-index .idx{font:12px var(--mono);color:var(--blue);letter-spacing:.5px}
+.project-index strong{font-size:18px;letter-spacing:-.03em;line-height:1.4}
+.project-index small{font-size:13px;color:var(--muted);line-height:1.6}
+.case-study{scroll-margin-top:24px}
+/* Screenshots: 각 프로젝트 카드 하단 전체 폭 */
+.case-shots{grid-column:1/-1;min-width:0;border-top:1px solid var(--line);background:#f1f3f9;padding:34px 36px 30px}
+.case-shots-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:16px;margin-bottom:22px;font:12px var(--mono);letter-spacing:.7px;color:var(--muted)}
+.case-shots-head span:first-child{color:var(--blue)}
+.shots{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(3,minmax(0,250px));justify-content:center;gap:clamp(20px,4vw,52px)}
+.shot{margin:0}
+.shot button{display:block;width:100%;padding:0;border:0;background:none;cursor:zoom-in;border-radius:20px}
+.shot img{display:block;width:100%;height:auto;border-radius:20px;border:6px solid #15171b;background:#15171b;box-shadow:0 18px 40px -22px #15171b80;transition:transform .25s}
+.shot button:hover img{transform:translateY(-4px)}
+.shot figcaption{display:flex;gap:10px;margin-top:14px;font-size:14px;line-height:1.6;color:var(--ink)}
+.shot figcaption span{font:12px/1.9 var(--mono);color:var(--blue)}
+.shots.wide{grid-template-columns:repeat(2,minmax(0,460px))}.shots.wide img{border-radius:10px;border:1px solid var(--line);background:white}
+.lightbox{border:0;padding:0;background:transparent;max-width:min(92vw,520px);max-height:92vh}
+.lightbox::backdrop{background:#0b0d12e6}
+.lightbox img{display:block;max-width:100%;max-height:86vh;width:auto;height:auto;border-radius:18px}
+.lightbox p{color:#e8ebf3;font-size:14px;text-align:center;margin:12px 0 0}
+.lightbox-close{position:fixed;top:18px;right:18px;background:white;border:0;padding:8px 14px;font-size:14px;cursor:pointer}
+/* Awards: 연도 */
+.award-results{display:flex;flex-direction:column;align-items:flex-end;gap:2px}
+.award-result{display:flex;align-items:baseline;gap:12px;white-space:nowrap}
+.award-year{font:14px var(--mono);color:var(--muted)}
+/* Problem Solving 배지 */
+.ps-badge{display:inline-block;margin-top:14px}
+.ps-badge img{display:block;height:84px;width:auto}
+@media(max-width:800px){.project-index{grid-template-columns:1fr;gap:8px}.project-index a{flex-direction:row;align-items:baseline;gap:14px;padding:14px 18px}.project-index small{display:none}.project-index strong{font-size:16px}.case-shots{padding:26px 0 24px}.case-shots-head{padding:0 28px}.shots{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;padding:0 28px 8px;gap:16px;scrollbar-width:thin}.shots>li{flex:0 0 min(62vw,230px);scroll-snap-align:center}.shots.wide>li{flex-basis:min(84vw,420px)}}
+@media(max-width:440px){.case-shots-head{padding:0 24px}.shots{padding:0 24px 8px}.awards-best .award{grid-template-columns:1fr;gap:8px}.award-results{align-items:flex-start}}
+.skill-category{padding:25px 0;border-top:1px solid var(--line)}.skill-category:first-child{border-color:var(--ink)}.skill-category h3{font:500 18px var(--mono);color:var(--blue);margin:0 0 14px}.skill-technologies{font-size:19px;font-weight:600;line-height:1.8;margin:0 0 8px;overflow-wrap:anywhere}.skill-context{font-size:15px;color:var(--muted);line-height:1.9;margin:0}.skill-groups+.education{margin-top:30px}
+@media(max-width:800px){.skill-technologies{font-size:18px}}
+/* Featured projects: 핵심이 한 화면(약 750px)에 들어오는 압축 레이아웃 */
+.features{display:grid;gap:28px}
+.feature{display:grid;grid-template-columns:minmax(0,1.12fr) minmax(0,1fr);scroll-margin-top:24px}
+.feature-shots{padding:30px 32px 26px;display:flex;flex-direction:column;min-width:0}
+.project .feature-tagline{font-size:clamp(24px,2.4vw,34px);font-weight:800;line-height:1.35;letter-spacing:-.045em;margin:12px 0 24px;color:inherit}
+.feature-shots .shots{grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;justify-content:stretch;margin-top:auto}
+.feature-shots .shot img{border-width:5px;border-radius:16px}
+.feature-shots .shot figcaption{font-size:13px;margin-top:10px;color:inherit}
+.feature-shots .shot figcaption span{color:inherit;opacity:.65}
+.quest-visual .shot img{border-color:#0d1320;background:#0d1320}
+.feature-body,.compact-body{padding:32px 34px;display:flex;flex-direction:column;min-width:0}
+.feature h3,.compact h3{font-size:30px;line-height:1.35;letter-spacing:-.04em;margin:0 0 12px}
+.feature .case-lead,.compact .case-lead{color:var(--ink);font-size:15.5px;line-height:1.8;margin:0 0 20px}
+.highlights{list-style:none;padding:0;margin:0 0 22px;border-top:1px solid var(--line)}
+.highlights li{display:grid;grid-template-columns:104px 1fr;gap:14px;padding:11px 0;border-bottom:1px solid var(--line);font-size:14.5px;line-height:1.65}
+.highlights strong{font-weight:700;color:var(--blue)}
+.highlights span{color:var(--muted)}
+.feature .tags,.compact .tags{margin-bottom:20px}
+.project-links{align-items:center}
+.project-links .btn-primary{background:var(--blue);color:white;text-decoration:none;padding:10px 18px;font-weight:600}
+.project-links .btn-primary:hover{background:#1638d9;color:white}
+.badge-live{display:inline-flex;align-items:center;gap:6px;color:#0f7a43!important;font-weight:700}
+.badge-live:before{content:'';width:7px;height:7px;border-radius:50%;background:#18a35a}
+.more{margin-top:18px;border-top:1px solid var(--line);padding-top:14px}
+.more summary{cursor:pointer;font-size:14px;font-weight:600;color:var(--muted);list-style:none;display:flex;align-items:center;gap:8px}
+.more summary::-webkit-details-marker{display:none}
+.more summary:after{content:'+';font:16px var(--mono);color:var(--blue)}
+.more[open] summary:after{content:'−'}
+.more summary:hover{color:var(--blue)}
+.more .contributions{margin:16px 0 0}
+.more .project-note{font-size:13px;margin:14px 0 0;color:var(--muted)}
+.compact{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);margin-top:28px;scroll-margin-top:24px}
+.compact-visual{padding:30px 32px;display:flex;flex-direction:column;justify-content:center;min-width:0}
+.compact-visual .project .reading-concept p,.compact-visual .reading-concept p{font-size:clamp(20px,2vw,26px)}
+.compact .case-shots{grid-column:1/-1}
+@media(max-width:1000px){.feature{grid-template-columns:1fr}.feature-shots .shots{max-width:620px}.compact{grid-template-columns:1fr}.compact-visual{order:-1}}
+@media(max-width:800px){.feature-shots{padding:24px 0 22px}.feature-shots .case-index,.feature-tagline{padding:0 28px}.feature-shots .shots{display:flex;padding:0 28px 6px}.feature-body,.compact-body{padding:26px 28px}.compact-visual{padding:26px 28px}.feature h3,.compact h3{font-size:26px}}
+@media(max-width:440px){.feature-shots .case-index,.feature-tagline{padding:0 24px}.feature-shots .shots{padding:0 24px 6px}.feature-body,.compact-body,.compact-visual{padding:24px}.highlights li{grid-template-columns:1fr;gap:2px}}
+/* About: capabilities */
+.capabilities{display:grid;gap:20px}
+.cap-kicker{font:12px var(--mono);letter-spacing:.8px;color:var(--blue);margin-bottom:10px}
+.ai-card{background:var(--blue);color:white;padding:34px 36px}
+.ai-card .cap-kicker{color:#cbd4ff}
+.ai-card h3{font-size:30px;line-height:1.3;letter-spacing:-.04em;margin:0 0 8px}
+.ai-lead{color:#e0e6ff;font-size:16px;margin:0 0 26px}
+.ai-flow{list-style:none;padding:0;margin:0 0 26px;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:#ffffff40;border:1px solid #ffffff40}
+.ai-flow li{background:var(--blue);padding:16px 16px 18px;display:flex;flex-direction:column;gap:4px}
+.ai-flow span{font:12px var(--mono);color:#cbd4ff}
+.ai-flow strong{font-size:16px;font-weight:700}
+.ai-flow small{font-size:13px;line-height:1.6;color:#e0e6ff}
+.ai-proof{list-style:none;padding:0;margin:0 0 22px}
+.ai-proof li{display:grid;grid-template-columns:116px 1fr;gap:16px;padding:12px 0;border-top:1px solid #ffffff33;font-size:14.5px;line-height:1.7}
+.ai-proof li:last-child{border-bottom:1px solid #ffffff33}
+.ai-proof strong{font-weight:700}
+.ai-proof span{color:#e6eaff}
+.chips{display:flex;flex-wrap:wrap;gap:7px}
+.chips span{font:12.5px var(--mono);padding:5px 11px;border:1px solid var(--line);background:white;color:#3b4352}
+.chips.on-blue span{background:transparent;border-color:#ffffff66;color:white}
+.cap-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.cap-card{background:white;border:1px solid var(--line);padding:28px 28px 26px;display:flex;flex-direction:column}
+.cap-card h3{font-size:22px;line-height:1.35;letter-spacing:-.03em;margin:0 0 8px}
+.cap-lead{font-size:14.5px;line-height:1.75;color:var(--muted);margin:0 0 18px}
+.cap-proof{font-size:13.5px;line-height:1.75;color:var(--ink);margin:18px 0 0;padding-top:14px;border-top:1px solid var(--line)}
+.capabilities+.education{margin-top:44px}
+@media(max-width:1000px){.ai-flow{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:800px){.cap-grid{grid-template-columns:1fr}.ai-card{padding:28px}}
+@media(max-width:440px){.ai-card,.cap-card{padding:24px}.ai-card h3{font-size:26px}.ai-flow{grid-template-columns:1fr}.ai-proof li{grid-template-columns:1fr;gap:2px}}
+/* Hero visual: 프로필 카드 + 뒤에서 받치는 앱 화면 */
+.hero{overflow-x:clip}.hero-top{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:40px}
+.hero-visual{--u:10px;position:relative;width:calc(var(--u)*44);height:calc(var(--u)*38);flex:none;margin-right:calc(var(--u)*-1)}
+.hero-portrait{position:absolute;z-index:2;left:50%;top:50%;width:calc(var(--u)*22);margin:0;transform:translate(-50%,-50%) rotate(-1.5deg);background:white;padding:calc(var(--u)*.7);box-shadow:0 26px 50px -24px #15171b80,0 0 0 1px #15171b10}
+.hero-portrait img{display:block;width:100%;height:auto}
+.hero-app{position:absolute;z-index:1;width:calc(var(--u)*14.5);top:calc(var(--u)*3);transition:transform .35s ease}
+.hero-app img{display:block;width:100%;height:auto;border:5px solid #15171b;border-radius:18px;background:#15171b;box-shadow:0 22px 40px -22px #15171b90}
+.app-left{left:0;transform:rotate(-9deg)}
+.app-right{right:0;top:calc(var(--u)*1);transform:rotate(8deg)}
+.app-left:hover{transform:rotate(-12deg) translate(-10px,-6px)}
+.app-right:hover{transform:rotate(11deg) translate(10px,-6px)}
+.app-tag{position:absolute;bottom:calc(var(--u)*-1.2);display:inline-flex;align-items:center;gap:6px;white-space:nowrap;font:11px var(--mono);letter-spacing:.4px;background:white;border:1px solid var(--line);padding:4px 9px;color:var(--blue);box-shadow:0 6px 14px -8px #15171b40}
+.app-left .app-tag{left:-6px}.app-right .app-tag{right:-6px;color:#0f7a43}
+.app-tag i{width:6px;height:6px;border-radius:50%;background:#18a35a}
+@media(max-width:1180px){.hero-visual{--u:8.4px}}
+@media(max-width:960px){.hero-top{grid-template-columns:1fr;gap:8px}.hero-visual{--u:8px;margin:0 auto 18px}}
+@media(max-width:440px){.hero-visual{--u:7.4px}.app-tag{font-size:10px}}
+@media(prefers-reduced-motion:reduce){.hero-app{transition:none}}
+/* 기관 로고 타일 */
+.org-logo{width:56px;height:56px;flex:none;display:flex;align-items:center;justify-content:center;background:white;border:1px solid var(--line);overflow:hidden}
+.org-logo img{display:block;max-width:80%;max-height:80%;width:auto;height:auto;object-fit:contain}
+.org-logo.dark{background:#15171b;border-color:#15171b}
+.org-logo.dark img{max-width:78%}
+.org-logo.fill{border:0}.org-logo.fill img{max-width:100%;max-height:100%;width:100%;height:100%;object-fit:cover}
+.org-logo.wide img{max-width:84%}.org-logo.round img{max-width:90%;max-height:90%}
+.org-logo.mono{background:#eef1fb;border-color:#e1e6f5;font:600 13px var(--mono);letter-spacing:-.2px;color:var(--blue)}
+.experience{display:grid;grid-template-columns:56px minmax(0,1fr);gap:22px;align-items:start}
+.experience-main{min-width:0}
+.awards-best .award{grid-template-columns:56px minmax(0,1fr) auto;gap:20px}
+@media(max-width:440px){.experience{grid-template-columns:44px minmax(0,1fr);gap:14px}.org-logo{width:44px;height:44px}.org-logo.mono{font-size:11px}.awards-best .award{grid-template-columns:44px minmax(0,1fr);gap:8px 14px}.awards-best .award-results{grid-column:2}}
+/* End-to-end pipeline strip */
+.strip{padding:40px 0 44px}
+.pipeline-head{display:flex;align-items:baseline;gap:18px;flex-wrap:wrap;margin-bottom:24px}
+.pipeline-kicker{font:12px var(--mono);letter-spacing:1px;color:#cbd4ff}
+.pipeline-head h2{margin:0;font-size:clamp(20px,2vw,26px);font-weight:700;letter-spacing:-.04em;line-height:1.4}
+.pipeline{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid #ffffff4d}
+.pipeline li{position:relative;border-right:1px solid #ffffff33}
+.pipeline li:last-child{border-right:0}
+.pipeline li:not(:last-child):after{content:'→';position:absolute;right:-9px;top:20px;z-index:1;width:18px;text-align:center;background:var(--blue);font:14px var(--mono);color:#cbd4ff}
+.pipeline a{display:flex;flex-direction:column;gap:3px;height:100%;padding:20px 22px 4px;transition:background .2s}
+.pipeline li:first-child a{padding-left:0}
+.pipeline a:hover{background:#ffffff14}
+.step-no{font:12px var(--mono);letter-spacing:.6px;color:#cbd4ff;margin-bottom:6px}
+.pipeline strong{font-size:22px;font-weight:800;letter-spacing:-.04em;line-height:1.35}
+.pipeline small{font-size:13.5px;color:#dfe5ff;line-height:1.6}
+.pipeline em{font-style:normal;font-size:13px;line-height:1.6;margin-top:10px;padding-top:10px;border-top:1px dashed #ffffff40;color:white;font-weight:600}
+@media(max-width:900px){.pipeline{grid-template-columns:repeat(2,minmax(0,1fr))}.pipeline li:nth-child(2){border-right:0}.pipeline li:nth-child(2):after{display:none}.pipeline li:nth-child(n+3){border-top:1px solid #ffffff33}.pipeline li:nth-child(3) a{padding-left:0}.pipeline a{padding-bottom:18px}}
+@media(max-width:440px){.strip{padding:32px 0 26px}.pipeline a{padding:16px 14px 14px}.pipeline li:nth-child(odd) a{padding-left:0}.pipeline strong{font-size:19px}.pipeline small{font-size:12.5px}.pipeline em{font-size:12px}}
+@media(prefers-reduced-motion:reduce){.pipeline a{transition:none}}
+/* Pipeline: NCS 시간 태그 */
+.step-top{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:6px}
+.step-top .step-no{margin:0}
+.step-hours{font:11px var(--mono);letter-spacing:.3px;color:white;background:#ffffff26;padding:2px 7px;white-space:nowrap}
+/* Learning */
+.learning{margin-top:20px;background:white;border:1px solid var(--line);padding:30px 32px}
+.learning-head{display:flex;justify-content:space-between;align-items:flex-end;gap:20px 32px;flex-wrap:wrap;margin-bottom:24px}
+.learning h3{font-size:22px;line-height:1.35;letter-spacing:-.03em;margin:0 0 4px}
+.learning-meta{font-size:14px;color:var(--muted);margin:0}
+.learning-stats{display:flex;gap:28px;margin:0}
+.learning-stats div{display:flex;flex-direction:column}
+.learning-stats dt{font-size:12px;color:var(--muted)}
+.learning-stats dd{margin:0;font:600 28px/1.2 var(--mono);color:var(--ink);letter-spacing:-1px}
+.learning-stats dd small{font-size:14px;color:var(--muted);margin-left:2px;letter-spacing:0}
+.hours-bar{display:flex;height:34px;gap:2px}
+.seg{flex-basis:0;min-width:0;display:flex;align-items:center;padding:0 8px;overflow:hidden}
+.seg b{font:500 11px var(--mono);white-space:nowrap}
+.seg-plan{background:#224dff;color:white}.seg-design{background:#7b93ff;color:white}.seg-build{background:#b3c1ff;color:#15236b}.seg-ship{background:#dde3ff;color:#15236b}.seg-data{background:#15171b;color:white}
+.hours-legend{list-style:none;padding:0;margin:12px 0 0;display:flex;flex-wrap:wrap;gap:6px 18px;font-size:13px;color:var(--ink)}
+.hours-legend li{display:flex;align-items:center;gap:7px}
+.hours-legend span{font:12px var(--mono);color:var(--muted)}
+.dot{width:10px;height:10px;display:inline-block}
+.data-track{margin-top:24px;border-top:1px solid var(--line);padding-top:20px}
+.data-track-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin-bottom:14px}
+.data-track-head strong{font:600 16px var(--mono)}
+.data-track-head span{font-size:13px;color:var(--muted)}
+.data-track ol{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line)}
+.data-track li{background:#fafbfe;padding:14px 14px 16px;display:flex;flex-direction:column;gap:3px}
+.data-track li span{font:11px var(--mono);color:var(--muted)}
+.data-track li strong{font-size:14.5px;font-weight:600;line-height:1.45}
+.data-track li small{font:12px var(--mono);color:var(--blue)}
+@media(max-width:800px){.learning{padding:26px}.data-track ol{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:440px){.learning{padding:22px}.learning-stats{gap:20px}.learning-stats dd{font-size:24px}.seg b{display:none}.step-hours{font-size:10px;padding:1px 5px}}
+.teaching{margin-top:16px}
+.teaching .learning-head{margin-bottom:18px}
+.teach-list{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line)}
+.teach-list li{background:#fafbfe;padding:14px 14px 16px;display:flex;flex-direction:column;gap:3px}
+.teach-list li span{font:11px var(--mono);color:var(--muted)}
+.teach-list li strong{font-size:14.5px;font-weight:600;line-height:1.45}
+.teach-list li small{font:12px var(--mono);color:var(--blue)}
+.teach-list li.next{background:white;outline:1px dashed #c7cfe3;outline-offset:-7px}
+.teach-list li.next strong{color:var(--muted);font-weight:500}
+.teach-list li.next small{color:var(--muted)}
+.teach-list li.planned{background:white}
+.teach-list li.planned strong{color:#4b5464;font-weight:500}
+.teach-list li.planned small{color:var(--muted)}
+.teach-list li span em{font-style:normal;font-size:10.5px;color:var(--blue);border:1px solid #c9d3ff;padding:0 5px;margin-left:6px;letter-spacing:.3px}
+@media(max-width:900px){.teach-list{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:600px){.teach-list{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){.project-index a,.shot img{transition:none}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">본문으로 이동</a>
+<header class="header"><nav class="wrap nav" aria-label="주 메뉴"><a class="brand" href="#">fncberry<span>*</span></a><div class="navlinks"><a href="#work">프로젝트</a><a href="#activities">활동</a><a href="#journey">주요 수상</a><a href="#about">소개</a><a href="#contact">연락하기</a></div></nav></header>
+<main id="main">
+<section class="wrap hero" aria-labelledby="hero-title"><div class="hero-top"><div class="hero-head"><div class="eyebrow">FNCBERRY / PERSONAL PORTFOLIO</div><h1 class="hero-title" id="hero-title">일상의 문제를<br><span>서비스로 풀다.</span></h1></div>
+<div class="hero-visual">
+<a class="hero-app app-left" href="#project-taxi" aria-label="택시투게더 프로젝트로 이동"><img src="assets/taxi-2-match.webp" width="674" height="1210" alt="" decoding="async"><span class="app-tag">LIVE DEMO</span></a>
+<a class="hero-app app-right" href="#project-quest" aria-label="로컬퀘스트 프로젝트로 이동"><img src="assets/localquest-1.webp" width="731" height="1300" alt="" decoding="async"><span class="app-tag"><i></i>ONE STORE</span></a>
+<figure class="hero-portrait"><img src="assets/profile.webp" width="600" height="681" alt="김민서 프로필 사진" fetchpriority="high"></figure>
+</div></div><div class="hero-bottom"><div><h2>안녕하세요, 김민서입니다.</h2><p>문제를 찾는 것부터 기획, 디자인, 개발, 배포까지.<br>서비스 하나를 처음부터 끝까지, 혼자서도 완성합니다.</p></div><div class="hero-aside"><div class="name">김민서 <small>@fncberry</small></div><p>고려대학교 정보대학<br>컴퓨터학과 · 26학번</p><div class="hero-links"><a href="https://github.com/fncberry" target="_blank" rel="noopener noreferrer">GitHub</a><a href="#work">프로젝트 살펴보기</a></div></div></div></section>
+<section class="strip" aria-labelledby="pipeline-title"><div class="wrap">
+<div class="pipeline-head"><span class="pipeline-kicker">END-TO-END</span><h2 id="pipeline-title">아이디어에서 출시까지, 한 사람이 끝까지</h2></div>
+<ol class="pipeline">
+<li><a href="#journey"><span class="step-top"><span class="step-no">01 / PLAN</span><span class="step-hours" title="NCS 이수시간">NCS 107h</span></span><strong>기획</strong><small>문제 정의 · 비즈니스 모델</small><em>청년창업주간 BMC 최우수상</em></a></li>
+<li><a href="#project-quest"><span class="step-top"><span class="step-no">02 / DESIGN</span><span class="step-hours" title="NCS 이수시간">NCS 42h</span></span><strong>디자인</strong><small>사용자 흐름 · 화면 설계</small><em>지도·바텀시트 중심 UX</em></a></li>
+<li><a href="#project-taxi"><span class="step-top"><span class="step-no">03 / BUILD</span><span class="step-hours" title="NCS 이수시간">NCS 255h</span></span><strong>개발</strong><small>프론트엔드 · 백엔드 · 로직</small><em>택시투게더 전체 개발</em></a></li>
+<li><a href="#project-quest"><span class="step-top"><span class="step-no">04 / SHIP</span><span class="step-hours" title="NCS 이수시간">NCS 61h</span></span><strong>배포</strong><small>웹 배포 · 앱 스토어 출시</small><em>Vercel 데모 · 원스토어 출시</em></a></li>
+</ol>
+</div></section>
+<section id="work" class="section"><div class="wrap">
+<div class="section-head"><div><div class="kicker">01 — DEVELOPMENT EXPERIENCE</div><h2 id="projects-heading">문제에서 시작한 프로젝트</h2></div></div>
+<ol class="project-index" aria-label="프로젝트 목록">
+<li><a href="#project-taxi"><span class="idx">01</span><strong>택시투게더</strong><small>구간별 정산 택시 동승 · 기획·전체 개발</small></a></li>
+<li><a href="#project-quest"><span class="idx">02</span><strong>로컬퀘스트</strong><small>원스토어 출시 여행 앱 · 프론트엔드·기획</small></a></li>
+<li><a href="#project-english"><span class="idx">03</span><strong>문장 단위 영어 독해</strong><small>교육 프로그램 · 테스터 빌드 개발</small></a></li>
+</ol>
+<div class="features">
+<article class="project feature" id="project-taxi" aria-labelledby="taxi-title">
+<div class="feature-shots taxi-visual">
+<div class="case-index">PROJECT 01 / TAXI TOGETHER</div>
+<p class="feature-tagline">함께 타되, 탄 만큼만.</p>
+<ol class="shots">
+<li><figure class="shot"><button type="button"><img src="assets/taxi-1-route.webp" width="674" height="1210" alt="택시투게더 메인 화면. 지도에 출발지 고려대와 도착지 강남역이 표시되고, 빠른 장소 선택과 출발 시간 옵션이 있다." decoding="async"></button><figcaption><span>01</span>출발·도착 지정</figcaption></figure></li>
+<li><figure class="shot"><button type="button"><img src="assets/taxi-2-match.webp" width="674" height="1210" alt="매칭 결과 화면. 혼자 타면 15,900원인 경로에 동승 가능한 택시 5대가 내 부담금, 절약률, 우회 시간, 동승 인원과 함께 나열된다." decoding="async"></button><figcaption><span>02</span>후보별 부담금 비교</figcaption></figure></li>
+<li><figure class="shot"><button type="button"><img src="assets/taxi-3-fare.webp" width="674" height="1210" alt="요금 계산 펼침 화면. 승하차 지점으로 나눈 4개 구간의 거리와 요금을 구간 탑승 인원으로 나누고, 동승자별 금액 합계가 총요금 17,000원과 일치한다." decoding="async"></button><figcaption><span>03</span>구간별 정산 근거</figcaption></figure></li>
+</ol>
+</div>
+<div class="feature-body">
+<div class="project-meta"><span>기획 · 전체 개발</span><span>해커톤 데모</span></div>
+<h3 id="taxi-title">택시투게더</h3>
+<p class="case-lead">같은 방향으로 가는 사람을 연결하고, 각자 탑승한 구간에 맞춰 요금을 나누는 택시 동승 서비스입니다.</p>
+<ul class="highlights">
+<li><strong>구간별 정산</strong><span>승하차 지점으로 경로를 나눠 구간 요금을 탑승 인원으로 분담</span></li>
+<li><strong>3단계 매칭</strong><span>시간·경로·방향으로 거른 뒤 실제 우회율까지 확인</span></li>
+<li><strong>검증된 로직</strong><span>정산·매칭을 순수 함수로 분리하고 회귀 테스트로 검증</span></li>
+</ul>
+<div class="tags"><span class="tag">Next.js · React</span><span class="tag">TypeScript</span><span class="tag">Supabase</span><span class="tag">Kakao API</span><span class="tag">Vercel</span></div>
+<div class="project-links"><a class="btn-primary" href="https://taxi-share-kappa.vercel.app" target="_blank" rel="noopener noreferrer">데모 보기</a><a href="https://github.com/NBTking/taxi-share" target="_blank" rel="noopener noreferrer">GitHub 코드</a></div>
+<details class="more">
+<summary>구현 자세히 보기</summary>
+<ul class="contributions">
+<li><strong>동승의 불편을 서비스로</strong><span>같은 방향의 동승자를 찾고, 탑승 구간에 맞춰 비용을 나누는 서비스를 기획했습니다. 매칭 결과에서 부담금을 확인하고 동승방에 합류하는 흐름으로 연결합니다.</span></li>
+<li><strong>납득할 수 있는 정산</strong><span>승하차 지점별로 경로를 나누고 탑승 인원에 따라 요금을 배분했습니다. 개인별 합계가 총요금과 일치하도록 차액을 처리하고, 정산 확정 후에는 금액을 고정합니다.</span></li>
+<li><strong>가는 길에 태우는 매칭</strong><span>시간·경로·방향으로 후보를 먼저 좁힌 뒤 실제 우회율을 확인하는 3단계 매칭을 구현했습니다. 저장한 경로를 재사용해 후보당 길찾기 호출을 줄였습니다.</span></li>
+<li><strong>화면부터 데이터까지</strong><span>출발·도착 검색, 동승방 생성·합류, 실시간 갱신을 연결했습니다. 정산·매칭 로직은 순수 함수로 분리하고 회귀 테스트로 검증합니다.</span></li>
+</ul>
+<p class="project-note">데모의 동승자는 시연용 샘플이며, 실제 결제는 연동하지 않았습니다.</p>
+</details>
+</div>
+</article>
+<article class="project feature" id="project-quest" aria-labelledby="quest-title">
+<div class="feature-shots quest-visual">
+<div class="case-index">PROJECT 02 / LOCAL QUEST</div>
+<p class="feature-tagline">한산한 곳일수록, 보상은 크게.</p>
+<ol class="shots">
+<li><figure class="shot"><button type="button"><img src="assets/localquest-1.webp" width="731" height="1300" alt="로컬퀘스트 지도 화면. 수원 행궁동 일대에 퀘스트 마커가 표시되고, 바텀시트에 '행궁동 벽화마을 한 컷' 사진 퀘스트가 한산 보너스 700 EXP와 함께 열려 있다." decoding="async"></button><figcaption><span>01</span>지도에서 퀘스트 발견</figcaption></figure></li>
+<li><figure class="shot"><button type="button"><img src="assets/localquest-2.webp" width="731" height="1300" alt="도착 인증 화면. 목적지 주변의 인증 반경이 원으로 표시되고, 반경 안에 들어오면 도착 인증하기 버튼이 활성화된다." decoding="async"></button><figcaption><span>02</span>반경 기반 도착 인증</figcaption></figure></li>
+<li><figure class="shot"><button type="button"><img src="assets/localquest-3.webp" width="731" height="1300" alt="퀘스트 완료 화면. 기본 110 × 혼잡도 1.4 × 비피크 1.2 × 스트릭 1.05로 계산된 194 EXP 보상과 레벨 진행도, 배지 진행 상황이 표시된다." decoding="async"></button><figcaption><span>03</span>혼잡도 반영 보상</figcaption></figure></li>
+</ol>
+</div>
+<div class="feature-body">
+<div class="project-meta"><span>프론트엔드 · 서비스 기획</span><span class="badge-live">원스토어 출시</span></div>
+<h3 id="quest-title">로컬퀘스트</h3>
+<p class="case-lead">덜 붐비는 곳을 걸어서 찾아가는 관광 퀘스트 앱입니다. 한산한 장소일수록 보상이 커지도록 설계해, 여행객의 발길을 도시 곳곳으로 나눕니다.</p>
+<ul class="highlights">
+<li><strong>지도 중심 탐색</strong><span>마커로 주변 퀘스트를 고르고, 바텀시트에서 상세 확인 후 수락</span></li>
+<li><strong>위치 기반 인증</strong><span>목적지 반경 안에 들어오면 도착 인증, 사진 미션으로 완료</span></li>
+<li><strong>혼잡도 보상</strong><span>기본 경험치에 혼잡도·비피크·연속 방문 배율을 곱해 지급</span></li>
+</ul>
+<div class="tags"><span class="tag">Android</span><span class="tag">Frontend</span><span class="tag">Service Planning</span></div>
+<div class="project-links"><a class="btn-primary" href="https://m.onestore.co.kr/v2/ko-kr/app/0001009332" target="_blank" rel="noopener noreferrer">원스토어에서 보기</a></div>
+<details class="more">
+<summary>구현 자세히 보기</summary>
+<ul class="contributions">
+<li><strong>여행 시작부터 보상까지</strong><span>가입과 여행 스타일 설문부터 지역 선택, 퀘스트 수락·수행·보상까지 하나의 흐름으로 이어지도록 화면을 설계하고 구현했습니다.</span></li>
+<li><strong>필요한 만큼 보여주는 지도</strong><span>지도 마커에서 퀘스트 요약을 확인하고, 바텀시트를 펼쳐 관광지 상세를 보는 흐름으로 지도를 가리지 않고 정보를 전달합니다.</span></li>
+<li><strong>다시 탐험하게 하는 경험</strong><span>홈·지도·업적·배지를 중심으로 탐색하고, 경험치와 레벨, 배지 수집으로 다음 여행의 동기를 만듭니다.</span></li>
+</ul>
+</details>
+</div>
+</article>
+</div>
+<article class="project compact" id="project-english" aria-labelledby="english-title">
+<div class="compact-body">
+<div class="project-meta"><span>개발</span><span>테스터 빌드</span></div>
+<h3 id="english-title">문장 단위 영어 독해 프로그램 <small class="working-title">(가칭)</small></h3>
+<p class="case-lead">영어 문장을 단위로 독해를 연습하는 교육 프로그램입니다. 학습자가 문장을 직접 입력할 수 있는 테스터 빌드를 개발했습니다.</p>
+<ul class="highlights">
+<li><strong>직접 입력</strong><span>사용자가 원하는 영어 문장을 넣어 바로 학습</span></li>
+<li><strong>확장 방향</strong><span>학습 수준에 맞는 문장을 무작위로 제시하는 기능 계획</span></li>
+</ul>
+<div class="tags"><span class="tag">Education</span><span class="tag">English Reading</span><span class="tag">Prototype</span></div>
+<div class="project-links"><a href="https://github.com/fncberry/KSAT_ENG_LEARNING_Testing" target="_blank" rel="noopener noreferrer">GitHub 코드</a></div>
+</div>
+<div class="compact-visual english-visual">
+<div class="case-index">PROJECT 03 / ENGLISH LEARNING</div>
+<p class="feature-tagline">한 문장씩, 이해를 쌓아가다.</p>
+<div class="reading-concept"><span class="reading-label">문장 단위 학습</span><p lang="en">Every sentence<br>is a new beginning.</p><span class="reading-caption">학습 단위를 보여주는 예시 문장</span></div>
+</div>
+<!-- 데스크톱(가로) 화면 스크린샷 자리. assets/english-1.webp, english-2.webp를 넣으면 자동 표시, 없으면 숨김. 1280×800 비율 권장 -->
+<div class="case-shots" data-optional>
+<div class="case-shots-head"><span>SCREENS / 화면 구성</span><span>눌러서 크게 보기</span></div>
+<ol class="shots wide">
+<li><figure class="shot"><button type="button"><img src="assets/english-1.webp" width="1280" height="800" alt="영어 독해 프로그램의 문장 입력 화면." decoding="async"></button><figcaption><span>01</span>학습할 영어 문장 직접 입력</figcaption></figure></li>
+<li><figure class="shot"><button type="button"><img src="assets/english-2.webp" width="1280" height="800" alt="영어 독해 프로그램의 문장 단위 학습 화면." decoding="async"></button><figcaption><span>02</span>문장 단위로 독해 연습</figcaption></figure></li>
+</ol>
+</div>
+</article>
+</div></section>
+<dialog class="lightbox" id="lightbox" aria-label="스크린샷 크게 보기"><button type="button" class="lightbox-close" id="lightbox-close">닫기</button><img id="lightbox-img" alt=""><p id="lightbox-caption"></p></dialog>
+<section id="activities" class="section"><div class="wrap two-col">
+<div><div class="kicker">02 — EXPERIENCE</div><h2>활동 및 경험</h2></div>
+<ul class="experience-list">
+<li class="experience"><div class="org-logo mono" aria-hidden="true">지</div><div class="experience-main"><div class="experience-head"><h3>지느러미</h3><span class="experience-period">현재 활동 중</span></div><p class="experience-org">고려대학교 창업동아리</p><p class="experience-role">SW·AI 개발자</p></div></li>
+<li class="experience"><div class="org-logo dark"><img src="assets/logo-hackerton.webp" alt="The Hackerton 로고" loading="lazy"></div><div class="experience-main"><div class="experience-head"><h3>The Hackerton</h3><span class="experience-period">현재 활동 중</span></div><p class="experience-org">서울대학교·연세대학교·고려대학교·KAIST 연합 창업·바이브코딩 학회</p><p class="experience-role">고려대학교 지부 부회장 겸 교육 담당 운영진</p></div></li>
+<li class="experience"><div class="org-logo fill"><img src="assets/logo-codebakery.webp" alt="코드베이커리 로고" loading="lazy"></div><div class="experience-main"><div class="experience-head"><h3>코드베이커리</h3><span class="experience-period">고교 재학 중</span></div><p class="experience-org">한국디지털미디어고등학교 코딩 교육봉사 동아리</p><p class="experience-role">부원</p></div></li>
+</ul></div></section>
+<section id="journey" class="section"><div class="wrap two-col"><div><div class="kicker">03 — AWARDS</div><h2>주요 수상</h2></div><ul class="awards awards-best">
+<li class="award"><div class="org-logo round"><img src="assets/logo-koi.webp" alt="한국정보올림피아드 로고" loading="lazy"></div><h3 class="award-title">한국정보올림피아드 본선<small class="award-english" lang="en">Korean Olympiad in Informatics</small></h3><div class="award-results"><span class="award-result"><time class="award-year">2022</time><span class="award-prize">동상</span></span><span class="award-result"><time class="award-year">2023</time><span class="award-prize">장려상</span></span></div></li>
+<li class="award"><div class="org-logo wide"><img src="assets/logo-nypc.webp" alt="NYPC 로고" loading="lazy"></div><h3 class="award-title">NYPC<small class="award-english" lang="en">Nexon Youth Programming Challenge</small></h3><div class="award-results"><span class="award-result"><span class="award-year">2022 · 2023 · 2024</span><span class="award-prize">특별상</span></span></div></li>
+<li class="award"><div class="org-logo mono" aria-hidden="true">창업</div><h3 class="award-title">대한민국청년창업주간<br><span class="award-track">리버스 BMC 트랙</span></h3><div class="award-results"><span class="award-result"><time class="award-year">2026</time><span class="award-prize">최우수상</span></span></div></li>
+<li class="award"><div class="org-logo mono" aria-hidden="true">CPS</div><h3 class="award-title">CPS Festival<small class="award-english" lang="en">Creative Problem Solving Festival</small></h3><div class="award-results"><span class="award-result"><time class="award-year">2024</time><span class="award-prize">금상</span></span></div></li>
+<li class="award"><div class="org-logo mono" aria-hidden="true">goorm</div><h3 class="award-title">Groom Highschool Algorithm Challenge</h3><div class="award-results"><span class="award-result"><time class="award-year">2022</time><span class="award-prize">대상</span></span></div></li>
+</ul></div></section>
+<section id="about" class="section"><div class="wrap two-col"><div><div class="kicker">04 — ABOUT ME</div><h2>개발 역량과<br>배움의 배경</h2></div><div><div class="capabilities">
+<article class="ai-card" aria-labelledby="ai-title">
+<div class="cap-kicker">CORE / HOW I BUILD</div>
+<h3 id="ai-title">AI-native Development</h3>
+<p class="ai-lead">AI로 빠르게 만들고, 검증할 수 있는 구조로 통제합니다.</p>
+<ol class="ai-flow">
+<li><span>01</span><strong>스펙 정리</strong><small>요구사항과 화면 흐름을 먼저 문서로</small></li>
+<li><span>02</span><strong>에이전트 구현</strong><small>Claude Code로 기능 단위 구현</small></li>
+<li><span>03</span><strong>교차 검증</strong><small>회귀 테스트 + Codex로 한 번 더</small></li>
+<li><span>04</span><strong>직접 리뷰</strong><small>결과를 읽고 고치며 반복 개선</small></li>
+</ol>
+<ul class="ai-proof">
+<li><strong>택시투게더</strong><span>Claude Code로 기획부터 배포까지 전체 개발. 정산·매칭 로직은 순수 함수로 분리해 AI가 바꿔도 회귀 테스트로 확인합니다.</span></li>
+<li><strong>로컬퀘스트</strong><span>Claude Code와 Codex 두 에이전트로 이중 검증하며 원스토어 출시까지 완료했습니다.</span></li>
+<li><strong>The Hackerton</strong><span>연합 바이브코딩 학회의 교육 담당 운영진으로 에이전트 개발 환경, Git, GitHub 협업 강의를 진행하고 있습니다.</span></li>
+</ul>
+<div class="chips on-blue"><span>Claude Code</span><span>Codex</span></div>
+</article>
+<div class="cap-grid">
+<article class="cap-card" aria-labelledby="ps-title">
+<div class="cap-kicker">FOUNDATION</div>
+<h3 id="ps-title">Problem Solving</h3>
+<p class="cap-lead">알고리즘과 자료구조로 문제를 정확하게 푸는 힘이 개발의 바탕입니다.</p>
+<div class="chips"><span>C</span><span>Python</span><span>Algorithms</span><span>Data Structures</span></div>
+<p class="cap-proof">KOI 본선 2회 입상 · NYPC 3년 연속 특별상 · 구름 알고리즘 챌린지 대상</p>
+<a class="ps-badge" href="https://solved.ac/profile/fncberry" target="_blank" rel="noopener noreferrer" aria-label="solved.ac 프로필 fncberry"><img src="https://mazassumnida.wtf/api/v2/generate_badge?boj=fncberry" alt="solved.ac 티어 배지" height="84" loading="lazy" onerror="this.closest('.ps-badge').remove()"></a>
+</article>
+<article class="cap-card" aria-labelledby="pe-title">
+<div class="cap-kicker">PRODUCT</div>
+<h3 id="pe-title">Product Engineering</h3>
+<p class="cap-lead">서비스 기획부터 화면, 데이터, 배포까지 혼자서 끝까지 만듭니다.</p>
+<div class="chips"><span>Next.js</span><span>React</span><span>TypeScript</span><span>Tailwind CSS</span><span>Supabase</span><span>PostgreSQL</span><span>Vercel</span><span>Kakao API</span></div>
+<p class="cap-proof">익명 인증 · 실시간 데이터 갱신 · 지도·길찾기 API 연동 · 서비스 기획</p>
+</article>
+</div>
+</div>
+<div class="learning" aria-labelledby="learning-title">
+<div class="learning-head">
+<div><div class="cap-kicker">TRAINING</div><h3 id="learning-title">NCS 기반 소프트웨어 실무 교육</h3></div>
+<dl class="learning-stats"><div><dt>총 이수</dt><dd>598<small>h</small></dd></div><div><dt>능력단위</dt><dd>19<small>개</small></dd></div><div><dt>성취도 A</dt><dd>18<small>/19</small></dd></div></dl>
+</div>
+<div class="hours-bar" role="img" aria-label="분야별 이수시간: 기획 107시간, 디자인 42시간, 개발 255시간, 배포 61시간, 데이터 분석 133시간"><span class="seg seg-plan" style="flex-grow:107" title="기획 107시간"><b>107h</b></span><span class="seg seg-design" style="flex-grow:42" title="디자인 42시간"><b>42h</b></span><span class="seg seg-build" style="flex-grow:255" title="개발 255시간"><b>255h</b></span><span class="seg seg-ship" style="flex-grow:61" title="배포 61시간"><b>61h</b></span><span class="seg seg-data" style="flex-grow:133" title="데이터 분석 133시간"><b>133h</b></span></div>
+<ul class="hours-legend"><li><i class="dot seg-plan"></i>기획<span>107h</span></li><li><i class="dot seg-design"></i>디자인<span>42h</span></li><li><i class="dot seg-build"></i>개발<span>255h</span></li><li><i class="dot seg-ship"></i>배포<span>61h</span></li><li><i class="dot seg-data"></i>데이터 분석<span>133h</span></li></ul>
+<div class="data-track">
+<div class="data-track-head"><strong>Data Analysis</strong><span>빅데이터 분석 · 133h</span></div>
+<ol>
+<li><span>01</span><strong>탐색적 데이터 분석</strong><small>49h</small></li>
+<li><span>02</span><strong>피처 엔지니어링</strong><small>29h</small></li>
+<li><span>03</span><strong>분석 모델링</strong><small>33h</small></li>
+<li><span>04</span><strong>결과 시각화</strong><small>22h</small></li>
+</ol>
+</div>
+</div>
+<div class="learning teaching" aria-labelledby="teaching-title">
+<div class="learning-head">
+<div><div class="cap-kicker">TEACHING</div><h3 id="teaching-title">바이브코딩 강의</h3><p class="learning-meta">The Hackerton · 교육 담당 운영진 · 매주 진행</p></div>
+</div>
+<!-- 강의를 진행하면 해당 li의 class="planned"와 <em>예정</em>을 지우면 됨. 새 예정 강의는 같은 형식으로 추가 -->
+<ol class="teach-list">
+<li><span>01</span><strong>Agent 프로그래밍 환경 세팅</strong><small>AI 코딩 에이전트</small></li>
+<li><span>02</span><strong>Git 관리 방법</strong><small>버전 관리</small></li>
+<li><span>03</span><strong>GitHub 협업 방법</strong><small>협업 워크플로</small></li>
+<li class="planned"><span>04 <em>예정</em></span><strong>Skill과 MCP 사용법</strong><small>에이전트 확장</small></li>
+<li class="planned"><span>05 <em>예정</em></span><strong>Vercel 배포 방법</strong><small>웹 배포</small></li>
+<li class="planned"><span>06 <em>예정</em></span><strong>마크다운으로 에이전트 대형 프로젝트 관리</strong><small>프로젝트 관리</small></li>
+</ol>
+</div>
+<div class="education"><h3>학력</h3><div class="edu"><div><strong>고려대학교</strong><small>정보대학 컴퓨터학과 · 26학번</small></div><time>2026 —</time></div><div class="edu"><div><strong>한국디지털미디어고등학교</strong><small>웹프로그래밍과 22기</small></div><time>2023 — 2025</time></div></div></div></div></section>
+<section id="contact" class="contact"><div class="wrap"><div class="kicker">05 — GET IN TOUCH</div><h2>새로운 이야기는<br>여기서 시작해요.</h2><p>프로젝트 이야기, 협업 제안, 가벼운 인사도 좋습니다.</p><div class="contact-actions"><a class="email" href="mailto:mseo2454@gmail.com">mseo2454@gmail.com</a><button class="copy" type="button" id="copy-email">이메일 복사</button></div><div class="status" id="copy-status" role="status" aria-live="polite"></div><div class="socials"><a href="https://github.com/fncberry" target="_blank" rel="noopener noreferrer">GitHub</a><a href="https://solved.ac/profile/fncberry" target="_blank" rel="noopener noreferrer">solved.ac</a><a href="https://dreamhack.io/users/39311" target="_blank" rel="noopener noreferrer">Dreamhack</a><a href="https://discord.com/users/473786591870058518" target="_blank" rel="noopener noreferrer">Discord</a><a href="https://www.instagram.com/h.f.kms/" target="_blank" rel="noopener noreferrer">Instagram</a></div></div></section>
+</main><footer class="wrap footer"><span>© 2026 FNCBERRY / 김민서</span><a href="https://github.com/fncberry/fncberry" target="_blank" rel="noopener noreferrer">PROFILE ON GITHUB</a><a href="#">맨 위로</a></footer>
+<script>document.getElementById('copy-email').addEventListener('click',async()=>{const s=document.getElementById('copy-status');try{await navigator.clipboard.writeText('mseo2454@gmail.com');s.textContent='이메일 주소를 복사했습니다.';}catch{s.textContent='복사가 지원되지 않습니다. 이메일 주소를 직접 선택해 복사해 주세요.';}});
+// 스크린샷: 파일이 없는 자리는 숨기고, 남은 게 없으면 영역 전체를 숨김
+document.querySelectorAll('.case-shots img').forEach(img=>{
+ const drop=()=>{const item=img.closest('li'),box=img.closest('.case-shots');item.remove();if(!box.querySelector('.shot'))box.remove();};
+ if(img.complete&&img.naturalWidth===0)drop();else img.addEventListener('error',drop,{once:true});
+});
+// 스크린샷 크게 보기
+const lightbox=document.getElementById('lightbox'),lightboxImg=document.getElementById('lightbox-img'),lightboxCaption=document.getElementById('lightbox-caption');
+document.querySelectorAll('.shot button').forEach(btn=>{
+ const img=btn.querySelector('img'),cap=btn.closest('figure').querySelector('figcaption');
+ btn.setAttribute('aria-label',cap.textContent.replace(/^\d+/,'').trim()+' 크게 보기');
+ btn.addEventListener('click',()=>{lightboxImg.src=img.currentSrc||img.src;lightboxImg.alt=img.alt;lightboxCaption.textContent=cap.textContent.replace(/^\d+/,'').trim();lightbox.showModal();});
+});
+document.getElementById('lightbox-close').addEventListener('click',()=>lightbox.close());
+lightbox.addEventListener('click',e=>{if(e.target===lightbox)lightbox.close();});
+</script>
+</body></html>
